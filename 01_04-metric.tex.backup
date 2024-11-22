@@ -1,0 +1,53 @@
+\section{The metric}
+
+\begin{defn}
+ \label{SA:3.1.1}
+ A real vector space $V$ is called a metric vector space if on $ V $, a scalar product is defined as a map
+ $$ 
+ g:V \times V \to \R, 
+  $$
+such that for all $ u,v \in V $ and $ \Lambda \in \R $ the following propieties are satisfied:
+\begin{itemize}
+  \item[(Bilinear)] $g(\lambda u+v, w)= \lambda g(u,v)+ g(u,w) $
+  \item[(Symmetric)] $g(u,v)=g(v,u)$
+  \item[(Non-degenerate)] $\forall u \in V,g(u,v)=0 \Longleftrightarrow v=0$
+\end{itemize}
+If $e_{\alpha}$ is the orthonormal basis in $V,$ then
+\begin{equation}
+\label{SA:3.1}
+g(e_{\alpha}, e_{\beta})=g_{\alpha \beta}=\pm\delta_{\alpha \beta}=
+\begin{cases}
+\pm 1 & \alpha=\beta \\
+0 & \alpha\neq \beta
+\end{cases}
+\end{equation}
+\end{defn}
+
+The signature of the metric is defined by the number of $+1's$ and $-1's$, usually denoted by $(p,q).$ The idea if a metric can be extended to the space $\mfk{F}(M)$ of all vector fields and the space $\Omega^{1}(M)$ of all 1-forms on a manifold $M.$ On a smooth manifold $M,$ a metric $g$ assigns to each point $p \in M$ a metric $g_{p}$ on the tangent space $T_{p}M$ in a smooth varying way
+\[
+g_{p}:T_{p}M \times T_{p}M \to \R,
+\] 
+which satisfies the above propieties with $\lambda$ replaced by $f \in C^{\infty}(M),$ and $g(u,v)$ is a funtion on $M$ whose value at $p$ is $g_{p}(u_{p},v_{p}),$ where $u,v \in \mfk{F}(M)$ and $u_{p},v_{p}\in T_{p}M.$
+
+If the signature of $g$ is $(n,0),$ $n$ being the dimension of $M,$ we say that $g$ is a Riemmanian metric, while if $g$ has the signature of $(n-1,1),$ we say that $g$ is Lorentzian. A manifold equipped with a metric will be called a semi-Riemmannian manifold denoted by $(M, g).$
+
+Setting $\tilde{g}(u)(v)=g(u,v),$ we obtain an isomorphism
+\begin{equation}
+\label{SA:3.2}
+\tilde{g}:T_{p}M \to T_{p}^{*}M,
+\end{equation}
+which can be proved by using the non-degeneracy propierty and the fact that $\dim T_{p}M= \dim T_{p}^{*}M. $ 
+
+Let $\set{\pd{\alpha}}$ be a basis of a vector field on an open neighbourhood $U$ of a point in $M,$ then, the components of the metric are given by
+\begin{equation}
+\label{SA:3.3}
+g_{\alpha \beta}=g(\pd{\alpha}, \pd{\beta}).
+\end{equation}
+
+If the dimension of $M $ es $n$, then $g_{\alpha \beta}$ is an $n \times n$ matrix. The non-degeneracy property shows that $g_{\alpha \beta}$ is invertible and we shall denote the inverse by $g^{\alpha \beta},$ also $g_{\alpha \gamma}g^{\alpha \beta}=\delta_{\gamma}^{\beta}.$ This leads to the raising and lowering of indices which is a process of converting vector fields to 1-forms. With the help of (\ref{SA:3.2}), one can easily convert between tangent vectors and contangent vectors.
+
+\begin{exmp}
+
+\end{exmp}
+
+

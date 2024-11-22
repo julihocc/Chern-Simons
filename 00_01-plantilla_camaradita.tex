@@ -1,0 +1,142 @@
+%%% Paquetes
+
+%\usepackage[spanish]{babel}
+\usepackage{inputenc}
+%\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage[latin9]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+%\usepackage{empheq}
+
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{enumerate}
+%%% Comandos
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\C}{\mathbb C}
+
+\newcommand{\ti}[1]{\textit{#1}}
+\newcommand{\tb}[1]{\textbf{#1}}
+\newcommand{\mb}[1]{\mathbb{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\scr}[1]{\mathscr{#1}}
+\newcommand{\mfk}[1]{\mathfrak{#1}}
+\newcommand{\la}[1]{\mfk{#1}}
+\newcommand{\alg}[1]{\mfk{#1}}
+
+
+\newcommand{\eq}[1]{(\ref{#1})}
+\newcommand{\refp}[1]{(\ref{#1})}
+\newcommand{\fig}[1]{Fig.(\ref{#1})}
+
+\newcommand{\lan}{\langle}
+\newcommand{\ran}{\rangle}
+
+\newcommand{\op}[1]{\operatorname{#1}}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\newcommand{\var}[1]{\left( #1 \right)}
+\newcommand{\encap}[1]{\left[ #1 \right]}
+\newcommand{\imply}{\rightarrow}
+
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+\newcommand{\inp}[2]{\lan #1, #2\ran}
+
+\newcommand{\alp}{\alpha}
+\newcommand{\bet}{\beta}
+\newcommand{\gam}{\gamma}
+\newcommand{\vphi}{\varphi}
+\newcommand{\ep}{\epsilon}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\lam}{\lambda}
+\newcommand{\Lam}{\Lambda}
+\newcommand{\om}{\omega}
+\newcommand{\Om}{\Omega}
+\newcommand{\sig}{\sigma}
+\newcommand{\tht}{\theta}
+
+
+%%% comandos de este trabajo
+
+\newcommand{\comp}{\circ}
+\newcommand{\smf}[1]{\mc{F}\var{#1}}
+\newcommand{\diff}[1]{\ti{Diff}\var{#1}}
+\newcommand{\p}{\partial}
+\newcommand{\Ms}{\R^{4}}
+
+\newcommand{\nab}{\nabla}
+\newcommand{\dvg}{\nab \cdot}
+\newcommand{\crl}{\nab \times}
+
+\newcommand{\pt}[1]{\frac{\p #1}{\p t}}
+\newcommand{\pu}[1]{\p^{#1}}
+\newcommand{\pd}[1]{\p_{#1}}
+\newcommand{\comm}[2]{\left[ #1, #2\right]}
+\newcommand{\wed}{\wedge}
+\newcommand{\hod}{\star}
+\newcommand{\hdg}{\star}
+\newcommand{\hdgs}{\star_{s}}
+
+\newcommand{\sgn}{\op{sign}}
+\newcommand{\sumi}[1]{\sum_{#1 \in I_{3}}}
+\newcommand{\sn}[1]{\sig^{n}(#1)}
+\newcommand{\sne}[1]{\tilde{\sig}^{n}(#1)}
+
+\newcommand{\fib}[1]{\pi^{-1}(#1)}
+\newcommand{\dfp}[2]{\overline{\Om}^{#1}(P, #2)}
+\newcommand{\prm}[1]{{#1}^{\prime}}
+\newcommand{\lie}[2]{\left[#1,#2\right]}
+\newcommand{\liex}[2]{#1 #2 - #2 #1}
+\newcommand{\dwed}{\dot{\wed}}
+\newcommand{\Exp}{\op{Exp}}
+\newcommand{\Tr}{\op{Tr}}
+
+
+\newcommand{\ad}[1]{\op{ad}_{#1}}
+\newcommand{\Ad}[1]{\op{Ad}_{#1}}
+\newcommand{\lad}[1]{\alg{ad}_{#1}}
+\newcommand{\Lad}[1]{\alg{ad}_{#1}}
+
+\newcommand{\dd}[1]{\frac{d}{d#1}}
+\newcommand{\ct}[3]{c_{#1 #2}^{#3}}
+\newcommand{\df}[2]{\Lam^{#1}\left(#2\right)}
+
+\newcommand{\lap}{\triangle}
+\newcommand{\CP}[1]{\C \mathbb{P}^{#1}}
+\newcommand{\Ham}{\mc{H}}
+
+
+
+%%% Estilos
+
+\numberwithin{section}{chapter}
+\numberwithin{equation}{chapter} %% Comment out for sequentially-numbered
+\numberwithin{figure}{chapter} %% Comment out for sequentially-numbered
+
+\theoremstyle{plain}
+  \newtheorem{thm}{Theorem}[chapter]
+  \newtheorem{prop}[thm]{Proposition}
+  \newtheorem{lem}[thm]{Lemma}
+  \newtheorem{cor}[thm]{Corolary}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[chapter]
+\newtheorem{conj}{Conjecture}[chapter]
+\newtheorem{exmp}{Example}[chapter]
+
+\theoremstyle{remark}
+\newtheorem{claim}{Claim}
+\newtheorem*{rem}{Remark}
+\newtheorem*{note}{Note}
+\newtheorem{case}{Case}
+
+\hyphenation{Min-kow-ski}

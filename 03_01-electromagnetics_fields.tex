@@ -1,0 +1,141 @@
+\section{Electromagnetic fields}
+
+A source-free electromagnetic field is the prototype of Yang-Mills fields. We will show that a source-free
+electromagnetic field is a gauge field with gauge group $U(1).$
+
+Let $P(M^{4}, U(1))$ be a principal $U(1)$-principal bundle over the Minkowski space $M^{4}.$ Any principal bundle over
+$M^{4}$ is trivializable. We choose a fixed trivialization of $P(M^{4},U(1))$ and use it to write $P(M^{4}, U(1)).$ The
+Lie algebra
+$$
+\mfk{u}(1)=\set{z \in \C | z = -\bar{z}}
+$$
+of $U(1)$ may identified with $i\R.$
+
+Thus a connection form on $P$ may be written as $i \om,$ $\om \in \Lam^{1}(P),$ by choosing $i$ as the basis of the Lie
+algebra $i\R.$ The gauge field can be written as $i  \Om,$ where $\Om = d\om \in \Lam^{2}(P).$ The Bianchi identity $d
+\Om = 0$ is an immediate consequence of this result. 
+
+The bundle $\ad{}(P)$ is also trivial and we have $\ad{}(P)=M^{4}\times u(1).$ Thus the gauge field $F_{\om} \in
+\df{2}{M^{4}, \ad{}(P)}$, on the base $M^{4}$, can be written as $iF, \ F \in \df{2}{M^{4}}.$ Using the global gauge
+$s:M^{4} \to P$ defined by $s(x)=(x,1), \forall x \in M^{4},$ we can pull the connection form $i \om$ on $P$ to $M^{4}$
+to obtain the gauge potential $iA=is^{*}\om.$ Thus in this case, we have a global potential $A \in \df{1}{M^{4}}$ and
+the corresponding gauge field $F=dA.$ The Bianchi identity $dF=0$ for $F$ follows  from the exactness of the 2-form $F.$
+
+The field equations $\delta F=0$, for $\delta=\hdg d \hdg$ are obtained as the Euler-Lagrange equations minimizing the
+action $\int \abs{F}^{2},$ where $\abs{F}$ is the pseudo-norm induced by the Lorentz metric on $M^{4}$ and the trivial
+inner product on the Lie algebra $\mfk{u}(1).$
+
+We note that the action represents the total energy of the electromagnetic field. The two equations 
+\begin{equation}
+ \label{MM:8.1}
+dF=0, \ \delta F=0
+\end{equation}
+are the Maxwell's equations for a source-free electromagnetic field.
+
+A gauge transformation $f$ is a section of $\Ad{}(P)=M^{4}\times U(1).$ It is completely determined by the function
+$\psi \in \mc{F}(M^{4})$ such that 
+$$
+f(x)=\var{x, e^{i\psi(x)}} \in \Ad{}(P), \forall x \in M^{4}.
+$$
+
+If $iB$ denotes the potential obtained by the action of the gauge transformation $f$ on $iA,$ then we have
+$$
+iB=e^{-i\psi}(iA)e^{i\psi}+e^{-i\psi}d e^{i\psi},\text{ or }B=A+d\psi,
+$$ 
+which is the classical formulation of the gauge transformation $f$. 
+
+%We observe that the group $\mc{G}$ of a gauge
+%transformation acts transitively on the solution space of gauge connection $\mc{A}$ of equation (\ref{MM:8.1}) and
+%hence the moduli space $\mc{A}/\mc{G}$ reduces to a single point. 
+ 
+The above considerations can be applied to any $U(1)-$bundle over an arbitrary pseudo-Riemmannian manifold $M.$ We now
+consider the Euclidean version of Maxwell's equations to bring out the relation of differential geometry, topology and
+analysis with electromagnetic theory as an example of gauge theory. 
+
+Let $(M,g)$ be a compact, simply connected, oriented, Riemmannian manifold of dimension 4 with volume form $v_{g}.$ A
+connection $\om$ on $P(M, U(1))$ is called a \emph{Maxwell connection} or \emph{potential} if it minimizes the
+\emph{Maxwell action} $\mc{A}_{M}(\om)$ defined by
+\begin{equation}
+ \label{MM:8.2}
+\mc{A}_{M}(\om)=\frac{1}{8\pi^{2}}\int_{M} \abs{F_{\om}}^{2}_{x}dv_{g}.
+\end{equation}
+
+The corresponding Euler-Lagrange equations are
+\begin{equation}
+ \label{MM:8.3}
+dF_{\om}=0, \ \delta F_{\om}=0.
+\end{equation}
+
+A solution of equations (\ref{MM:8.3}) is called a \emph{Maxwell field} or a source-free electromagnetic field on $M.$
+We note that equations (\ref{MM:8.3}) are equivalent to the condition that $F_{\om}$ be harmonic. Thus a Maxwell
+connection is characterized byits curvature 2-form being harmonic.
+
+Now from topology we know that
+$$
+H^{2}(M, \Z)=[M, \CP{\infty}],
+$$
+where $[M, \CP{\infty}]$ is the set of homotopy classes of maps from $M$ to $\CP{\infty}.$ But as discussed in
+appendix X, $\CP{\infty}$ is the classifying space for $U(1)$-bundles. Thus each element of $[M, \CP{\infty}]$
+determines a principal $U(1)$-bundle over $M$ by pulling back the universal $U(1)$-bundle $S^{\infty}$ over $\C
+P^{\infty}.$ Hence each element $\alp \in H^{2}(M, \Z)$ corresponds to a unique isomorphism class of $U(1)$-bundles
+$P_{\alp}$ over $M.$
+
+Moreover, the first Chern class of $P_{\alp}$ equals $\alp$. Note that the natural embedding of $\Z$ into $\R$ induces
+an embedding of $H^{2}(M, \Z)$ into $H^{2}(M, \R).$ Thus we can regard $H^{2}(M, \Z)$ as a subset of $H^{2}(M, \R).$
+Now $H^{2}(M, \R)$ can be identified with the second cohomology group of the deRham complex $H^{2}_{DR}(M, \R),$ of the
+base manifold $M$. Thus an element
+$$
+\alp \in H^{2}(M, \Z) \subset H^{2}(M, \R) = H^{2}_{DR}(M, \R)
+$$
+corresponds to the class of a closed 2-form on $M$, which we al éstasso denote simply by $\alp$. By applying Hodge
+theory we can identify $H^{2}_{DR}(M, \R)$ with the space of harmonic 2-forms with respect to the Hodge Laplacian 
+$\lap_{2}=d \delta + \delta d$ on forms. Thus there exists a unique harmonic 2-form $\beta$ on $M$ such that $\alp =
+[\bet].$ It can be shown that $\bet$ is the curvature (gauge field) of a gauge connection on the $U(1)$
+-bundle $P_{\alp}$ over $M.$
+
+We note that $\lap \bet =0$ is equivalent to the set of two equations $d \bet =0, \ \delta \bet =0.$ As shown above the
+harmonic form is a Maxwell field, i.e., a source free electromagnetic field. The above discussion proves the following
+theorem.
+
+\begin{thm}
+ \label{MM:thm:8.1}
+Let $P(M, U(1))$ be a principal bundle over a compact, simply connected, oriented, Riemmannian manifold $M$. Then the
+Maxwell field is the unique harmonic 2-form representing the Euler class of the first Chern class $c_{1}(P). $
+\end{thm}
+
+Theorem \ref{MM:thm:8.1} suggest where we should look for examples of  source-free electromagnetic fields. Since every
+$U(1)$-bundle with connection is a pull-back of a suitable $U(1)$-universal bundle with universal connection, it is
+natural to examine this bundle first. 
+
+The Stiefel bundle $V_{\R}(n+k,k)$ over the Grassmaniann manifold $G_{\R}(n+k,k)$ is $k$-classifying for $SO(k).$ In
+particular, for $k=2,$ we get $V_{\R}(n+2,2)=SO(n+2)/SO(n)$ and $G_{\R}(n+2,2)=SO(n+2)/(SO(n)\times SO(2)).$ Similary,
+$V_{C}(n+1,1)=U(n+1)/U(n)=S^{2n+1}$ and $G_{\C}(n+1,1)=U(n+1)/(U(n)\times U(1))=\CP{n},$ which is the Hopf fibration. 
+
+Recall that the first Chern class classifies these principal $U(1)$-bundles and is an integral class. When applied to
+the base manifold $\CP{1}\cong S^{2}$ this classification corresponds to the Direc quantization condition for a
+monopole. 
+
+The natural (or universal) connection over these bundles satisfy source-free Maxwell's equations. We note that the
+pull-back of these universal connections do not, in general, satisfy Maxwell's equations. However we do get new
+solutions in the following situation.
+
+\begin{exmp}
+ If $M$ is an analytic submanifold of $\CP{n},$ then the $U(1)$-bundle $S^{2n+1},$ pulled back by embedding $i: M
+\hookrightarrow \CP{n}$, gives a connection on $M$ whose curvature satisfies Maxwell's equations. For example, if
+$M=\CP{1}=S^{2},$ then for each positive integer $n$, we have the following embedding
+$$
+f_{n}: \CP{1} \hookrightarrow \CP{n}
+$$
+given in homogeneous coordinates $z_{0},z_{1}$ on  $\CP{1}$ by 
+$$
+f_{n}(z_{0},z_{1})=(z_{0}^{n}, c_{1}z_{0}^{n-1}z_{1},..., c_{m}z_{0}^{n-m}z_{1}^{m},...,z_{1}^{n})
+$$
+where $c_{i}=\binom{1}{2}^{1/2}.$ 
+
+The electromagnetic field on $\CP{n}$ is pulled back by $f_{n}$ to give a field on $\CP{1}=S^{2}$ which corresponds to
+a magnetic monopole of strength $n/2.$ Moreover the corresponding principal $U(1)$-bundle is isomorphic to the lens
+space $L(n,1).$
+\end{exmp} 
+
+
+

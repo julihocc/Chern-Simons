@@ -1,0 +1,47 @@
+\section{Minkowski space}
+
+The Monkowski space is $\R^{4}$, like a vector space, with the \ti{Lorentz inner product}, which is the bilinear form defined by 
+$$
+\Lambda(x,y)=x^{0}y^{0}-x^{1}y^{1}-x^{2}y^{2}-x^{3}y^{3},
+$$
+for $x=(x^{0},\dots,x^{3}), y=(y^{0},\dots,y^{3})\in \Ms.$ Physically, $x^{0}$ denotes the time coordinate, and $x^{1},\dots,x^{3}$ denote the space ones. It is common in the physics literature to denote $x$ by $x^{\mu},$ and it is called \ti{a contravariant vector.}
+
+\begin{rem}
+We shall use the \emph{Heaviside Lorentz units} where \[\epsilon_{0}=\mu_0=c=1,\] which are the electric constant, magnetic constant and speed light, respectively.
+\end{rem}
+
+The Lorentz form is defined by the matrix 
+\begin{equation}
+\label{GF:1.1}
+\eta_{\alpha \beta}=\eta^{\alpha \beta}= \op{diag}(1,-1,-1,-1).
+\end{equation}
+We employ the \ti{Einsteins summation convention}: In any product of vector and tensor in which  an index appears once as a subscript and once as a superscript, that index is to be summed from 0 to 3. For example
+\begin{equation}
+\label{GF:1.2}
+\Lambda(x,y)=\eta_{\alpha \beta}x^{\alpha}y^{\beta}.
+\end{equation}
+
+Another convention we shall adopt is using the matrix $g$ to raise or lower indices:
+$$
+x_{\mu}=g^{\mu \nu} x^{\mu}, p^{\mu}=g_{\mu \nu} p_{\nu}.
+$$
+We said $x_{\mu}$ is \ti{a covariant vector.} 
+
+Strictly speking, vector whose component are denoted by subscripts should be constructed as elements of the dual space $(\Ms)^*,$ and the map $x^{\alpha} \mapsto x_{\alpha}$ is the isomorphism of $\Ms$ with $(\Ms)^*$ induced by the Lorentz form. Practically, the effect is to change the sign of the space components.
+Then, formula (\ref{GF:1.2}) can be written as 
+\[\Lambda(x,y)=x^{\alpha}y_{\alpha}=x_{\alpha}y^{\alpha}.\]
+\begin{rem}
+The Lorentz inner product of a vector $x$ with itself is denoted by $x^{2}$ and its Euclidean norm by $\abs{x}.$
+
+Vectors $x$ such tha $x^{2}> 0, x^{2}=0$ or $x^{2}<0$ are called \emph{timelike, lightlike or spacelike,} respectively.
+\end{rem}
+
+The notations for derivatives on $\Ms$ is \[\p _{\alpha}= \frac{\p}{\p x^{\alpha}},\] so that, with respect to space-time coordinates $\tb{x}, t$
+\begin{equation}
+\label{GF:1.3}
+\p_{\alpha}=(\p_{0}, \dots, \p_{3})=(\p_{t}, \nabla_{\tb{x}}), \p^{\beta}=(\p^{0}, \dots, \p^{3})=(\p_{t}, -\nabla_{\tb{x}}),
+\end{equation}
+and $\p^{2}$ is the wave operator or d'Alembertian:
+$$
+\p^{2}=\p_{0}^{2}-\p_{1}^{2}-\p_{2}^{2}-\p_{3}^{2}=\p_{t}^{2}-\nabla^{2}_{\tb{x}}.
+$$

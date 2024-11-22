@@ -1,0 +1,28 @@
+\section{Relation with physics}
+
+Let $P$ be a principal $G$-bundle and assume for simplicity that $G$ is a matrix Lie group, like $SU(n).$ Let $\rho: G
+\to GL(V)$ be a finite-dimensional representation of $G.$ Construct the associated bundle $P \times_{G} V.$ Then a
+local section of $P$ will induce a local trivialisation of $P \times_{G} V.$
+
+Let $s$ be a local sections of the associated bundle $P \times_{G} V.$ On some local trivialisation $(U, \sig)$ of $P,$
+induced by a local section $\sig:U \to P,$ the section $s$ can be considered as a $V$-valued function. This is the
+point of view most physicists take.
+
+If we consider $s$ as a $G$-equivariant function $\bar{s}:P \to V,$ then on $U \subset M$ the section $s$ is realized
+as a $V$-valued function as $\bar{s}\comp \sig.$ In these local coordinates, the covariant derivative $s \mapsto
+(ds)^{H}$ takes the form
+\begin{align*}
+ (ds)^{H}\comp \sig &= \sig^{*}(ds + \om \dwed s) \\
+&=d\sig^{*}s + \sig^{*}\om \dwed \sig^{*}s \\
+&= (d+\om_{U})\sig^{*}s.
+\end{align*}
+That is, on local trivialisation, a connection $\om$ takes the form $d+\om_{U}$, where $\om_{U}$ transforms according
+to the rule (\ref{JB:1}). This is the usual form of a connection one encounters in physics.
+
+The statement that two connections differ by an element of $\dfp{1}{\mfk{g}}$ translates, on the level of vector
+bundles, to the one that two connection $\nab, \prm{\nab}$ differ by an element of $\Gamma(M, T^{*}M\otimes E).$ The
+curvature $F_{\om}=d\om + \frac{1}{2} \om \wed \om$ lies in $\dfp{2}{×¿\mfk{g}}$ and therefore corresponds to an
+element $F \in \Gamma(T^{*}M \otimes T^{*}M \otimes E),$ which is also known as the curvature connection $\nab$ on $E.$
+
+The local form on $M$ of the curvature $F_{\om}=d\om + \frac{1}{2}\lie{\om}{\om}$ is $F_{u}=d \om_{U} +
+\frac{1}{2}\lie{\om_{U}}{\om_{U}},$ the usual field strength tensor in field theory.

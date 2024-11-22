@@ -1,0 +1,31 @@
+\section*{Differential manifolds}
+
+\begin{defn}[Differential manifold]
+\label{marathe_defn-1.1}
+ Let $M$ be a topological space and $F$ a Banach space. 
+
+\begin{itemize}
+ \item A \tb{(local coordinate) chart} $(U, \phi)$ is a open subset $U \subset M$ and a homeomorphism $\phi: U \to \phi(U) \subset F.$
+\item If $M$ admits a family of charts such that covers $M$, $M$ is called a \tb{topological manifold}, $\mc{A}$ is said to be an \tb{atlas} for $M$. 
+\item The homeomorphisms 
+$$\phi_{ij}:= \phi_{i}\comp \phi_{j}^{-1}: \phi_{j}(U_{ij}) \to \phi_{i}(U_{ij}),$$ with $U_{ij}= U_{i} \cap U_{j}$ are called \tb{transition functions} of the atlas $\mc{A}.$
+\item If $\set{\phi_{ij}}$ are  $C^{p}-$ diffeomorphisms, $0 < p \leq +\infty,$ $\mc{A}$ is called a \tb{differentiable atlas of class $C^{p}$.} 
+\item The maximal differentiable atlas of class $C^{p}$ containing $\mc{A}$ es called \tb{th differentiable structure} on $M$ of class $C^{p}.$ If $p=+\infty$, $\mc{A}$ is also called \tb{smooth structure}. A manifold with a smooth structure is also called \tb{differentiable manifold.}
+\item The dimension $dim M$ of $M$ is, by definition, the dimensi\'on of $F.$ If $F=\R^{n},$ $M$ is called a \tb{real manifold}, and if $F=\C^{n},$ $M$ is called a \tb{complex manifold}. 
+\end{itemize}
+  
+\end{defn}
+
+\begin{defn}[Differential application]
+\label{marathe_defn-1.2}
+ Let $M,N$ be a differentiable manifolds and $f:M \to N.$ We say that $f$ is \tb{differentiable} (or \tb{smooth}) if for each $(U, \phi) \in \mc{A}(M)$, $(V, \psi) \in \mc{A}(N)$, such that $f(U)\subset V,$ $\psi \comp f \comp \phi^{-1}$ is differentiable (or smooth). We shall denote the set of all smooth functions $:M \to N$ by $\smf{M,N}.$ When $N=\R$, we write $\smf{M}$ instead $\smf{M,\R}.$ 
+
+A bijective differentiable $f\in\smf{M,N}$ is called a diffeomorphism \ti{if $f^{-1}$ is differentiable.} The set of all diffeomorphisms of $M$ with itself under compositions is a group denoted by $\diff{M}.$ 
+ \end{defn}
+
+\begin{defn}[Open submanifold]
+   \label{marathe_defn-1.3}
+Let $M$ be a differential manifold with differential structure $\mc{A}$ and let $U\subset M$ be open. The collection of all charts of $\mc{A}$ whose domain is a subset of $U$ is an atlas for $U,$ which makes $U$ into a differential manifold. This manifold is called an \tb{open submanifold} of $M$.
+\end{defn}
+
+Let $\R^{n}_{+}=\set{(x_{1}, \dots, x_{n})\in \R^{n}| x_{n} \geq 0}$ and we give it the realtive topology; the set $\R_{0}^{n}=\set{x\in \R^{n}| x_{n=0}}$ es called the boundary of $R^{n}_{+}.$ If $M$ is a topological space, a \tb{chart with boundary} for $M$ is a pair $(U, \phi)$ where $U$ is an open set of $M$ and $\phi:U\to \phi(U) \subset \R^{n}_{+}$ is a homeomorphism.

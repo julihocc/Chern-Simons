@@ -1,0 +1,322 @@
+\section{Yang-Mills Fields}
+
+The Yang-Mills fields form a special class of gauge fields that have been extensively investigated.
+
+Let M be a connected manifold and let $P(M, G)$ be the principal bundle over $M$ with Lie group $G$ as the gauge group.
+In this section we restrict ourselves to the space $\mc{A}(P)$ of gauge connections as our configuration space. If
+$\om$ is a gauge connection on $P$ then, in a local gauge $t \in \Gamma(U, P)$ we have the corresponding gauge
+potential
+$$
+A_{t}=t^{*}\om \in \Lam^{1}(U, \ad{}(P)).
+$$
+
+Locally, a gauge transformation $g \in \mc{G}$ reduces to a $G$-valued function $g_{t}$ on U, and its action on $A_{t}$
+is given by
+$$
+g_{t}\cdot A_{t}=(ad g_{t}) \comp A_{t}+ g_{t}^{*}\Theta,
+$$
+where $\Theta$ is the canonical 1-form on $G$. It is customary to indicate this gauge transformation as follows
+$$
+A^{g}:=g \cdot A = g^{-1}Ag + g^{-1}dg
+$$
+when the section $t$ is understood.
+
+The gauge field $F_{\om}$ is the unique 2-form on $M$, with values in the bundle $\ad{}(P)$, satisfying
+$$
+F_{\om}=s_{\Om},
+$$
+where $\Om$ is the curvature of the gauge connection $\om.$ In the local gauge $t$, we can write
+$$
+F_{\om}0 d^{\om}A_{s}= dA_{s}+\frac{1}{2}\lie{A_{s}}{A_{s}},
+$$
+where the bracket is taken as the bracket of bindle valued forms.
+
+We note that it is always possible to introduce a Riemannian metric on a vector bundle over $M$. The manifold $M$ itself
+admits a Riemannian metric. We assume that metrics are chosen on $M$ and the bundles over $M$ and the norm is defined
+on the sections of these bundles as an $L^{2}$-norm is $M$ is not compact. However, to simplify the mathematical
+considerations, we assume in the rest of this chapter that $M$ us a compact, connected, oriented, Riemannian manifold
+and that $G$ is a compact, semisimple Lie group, unless otherwise indicated.
+
+For a given $M$ and $G$, the principal $G$-bundles over $M$ are classified by $[M; BG]$, the set of homotopy classes of
+maps of $M$ into the classifying space $BG$ for $G$. For $f \in [M; BG]$, let $P_{f}$ be a representative of the
+isomorphism class of potentials on $P_{f}.$ Then, the Yang-Mills configuration space $\mc{A}_{M}$ is the disjoint union
+of the spaces $\mc{A}(P_{f})$, i.e.
+$$
+\mc{A}_{M}= \cup\set{\mc{A}P_{f}| f \in [M; BG]}.
+$$
+
+The isomorphism class $[P_{f}]$ is uniquely determined by the characteristic classes of the bundle $P_{f}$. For
+example, if $\dim M=4$ and $G=SU(2)$, then $c_{1}(P_{f})=0$ and hence $[P_{f}]$ is determined by the second Chern class
+$c_{2}(P_{f})=c_{2}(V_{f})$, where $V_{f}$ is the complex vector bundle of rank two associated to $P_{f}$ by the
+defining representation of $SU(2)$. Now the class $c_{2}(P_{f})$, evaluated on the fundamental cycle of $M$, is
+integral, i.e. $c_{2}(P_{f})[M]\in \Z$. Thus, in this case, $P_{f}$ is classified by an integer $n(f)$ and we can write
+$\mc{A}(P_{f})$ as $\mc{A}_{n(f)}$ or simply as $\mc{A}_{n}.$
+
+In the physical literature, this number is referred to as the instanton number of $P_{f}$. From both the physical and
+the mathematical point of view, this is the most important case.
+
+We now restrict ourselves to a fixed member $\mc{A}(P_{f})$ of the disjoint union $A_{M}$ and write simply $P$ and
+$P_{f}$. Then the \emph{Yang-Mills action} or \emph{functional} $\mc{A}_{YM}$ is defined by
+\begin{equation}
+ \label{MM:8.8}
+ \mc{A}_{YM}(\om)=\frac{1}{8 \pi^{2}}\int_{M}\abs{F_{\om}}^{2}dv_{g}, \ \forall \om \in \mc{A}(P).
+\end{equation}
+
+To find the corresponding Euler-Lagrange equations, we take into account the fact that the space of gauge potentials is
+an affine space and hence it is enough to consider variations along the straight lines through $\om$ of the form
+$$
+\om_{t}=\om+tA, \ A \in \Lam^{1}(M, \ad{} P).
+$$
+
+Direct computation shows that the gauge field, corresponding to the gauge potential $\om_{t}$, is given by
+\begin{equation}
+ \label{MM:8.9}
+ F_{\om_{t}}=F_{\om}+td^{\om}A+t^{2}(A\wed A).
+\end{equation}
+
+Using equations (\ref{MM:8.8}) and (\ref{MM:8.9}) we obtain
+\begin{align*}
+ \frac{d}{dt}\mc{A}_{YM}(\om_{t})|_{t=0} &= \frac{d}{dt}\var{\int_{M}\abs{F_{\om}+td^{\om}A+t^{2}(A \wed
+A)}_{x}^{2}dv_{g}}_{t=0} \\
+&=2 \int_{M} \lan F_{\om}, d^{\om}A \ran dv_{g}\\
+&=2 \int_{M} \lan \delta^{\om}, A \ran dv_{g}.
+\end{align*}
+
+The above result is often expressed in the form of a variational equation
+\begin{equation}
+ \label{8.10}
+ \del \mc{A}_{YM}(\om)(A)=2\ave{\del^{\om}F_{\om}}{A}
+\end{equation}
+
+A gauge potential $\om$ is called a \emph{critical point} of the Yang-Mills functional if
+\begin{equation}
+ \label{MM:8.11}
+ \del \ymf(\om)(A)=0, \ \forall A \in \Lam^{1}(M, \ad{} P).
+\end{equation}
+
+The critical points of the Yang-Mills functional are solutions of the corresponding Euler-Lagrange equations
+\begin{equation}
+ \label{MM:8.12}
+ \del^{\om}F_{\om}=0.
+\end{equation}
+
+The equations (\ref{MM:8.12}) are called the pure (or sourceless) \emph{Yang-Mills equations}. A gauge potential $\om$
+satisfying the Yang-Mills equations is called the \emph{Yang-Mills connection} and its gauge field $F_{\om}$ is called
+the \emph{Yang-Mills fields}. Using local expressions for $d^{\om}$ and $\del^{\om}$ it can be shown that
+$\del^{\om}=\pm \hdg d^{\om} \hdg.$ From this it follows that $\om$ satisfies the Yang-Mills equations (\ref{MM:8.12})
+if and only if it is a solution of the equation
+\begin{equation}
+ \label{MM:8.13}
+ d^{\om} \hdg F_{\om} =0.
+\end{equation}
+
+In the following theorem we have collected together various characterizations of the Yang-Mills equations.
+
+\begin{thm}
+ \label{MM:thm:8.2}
+ Let $\om$ be a connection on the bundle $P(M,G)$ with finite Yang-Mills action. Then the following statements are
+equivalent:
+\begin{enumerate}[(i)]
+ \item $\om$ is a critical point of the Yang-Mills functional;
+ \item $\om$ satisfies the equation $\del^{\om}F_{\om}=0$;
+ \item $\om$ satisfies the equation $d^{\om}\hdg F_{\om}=0$;
+ \item $\om$ satisfies the equation $\nab^{\om}F_{\om}=0,$ where $\nab^{\om}=d^{\om}\del^{\om}+\del^{\om}d^{\om}$ is
+the Hodge Laplacian on forms.
+\end{enumerate}
+\end{thm}
+
+The equivalence of the first three statements follows form the discussion given above. The equivalence of the statement
+(ii) and (iv) above follows from the identity
+$$
+\ave{\nab^{\om}F_{\om}}{F_{\om}}=\norm{d^{\om}F_{\om}}^{2}+\norm{\del^{\om}F_{\om}}^{2}=\norm{\del^{\om}F_{\om}}^{2}.
+$$
+
+The second equality in the above identity follows from the Bianchi identity
+\begin{equation}
+ \label{MM:8.14}
+ d^{\om}F_{\om}=0.
+\end{equation}
+
+This identity is a consequence of the Cartan structure equations and express the fact that locally, $F_{\om}$ is
+derived from a potential. It is customary to consider the pair (\ref{MM:8.12}) and (\ref{MM:8.14}) or (\ref{MM:8.13})
+and (\ref{MM:8.14}) as the Yang-Mills equations. This is consistent with the fact that they reduce to Maxwell's
+equations for the electromagnetic field $F$, when the gauge group $G$ is $U(1)$ and $M$ is the Minkowski space.
+
+In local orthonormal coordinates, the Yang-Mills equations can be written as follows
+\begin{equation}
+ \label{MM:8.15}
+ \frac{\p F_{ij}}{\p x^{i}}+\lie{A_{i}}{F_{ij}}=0,
+ \end{equation}
+where the components $F_{ij}$ of the 2-form $F_{\om}$ are given by
+\begin{equation}
+ \label{MM:8.16}
+ F_{ij}=\frac{\p A_{j}}{\p x^{i}}-\frac{\p A_{i}}{\p x^{j}}+\lie{A_{i}}{A_{j}}.
+\end{equation}
+
+Thus we see that the Yang-Mills equations are a system of non-linear, second order, partial differential equations for
+the components of the gauge potential $A$. The presence of quadratic and cubic terms in the potential is interpreted as
+representing the self-interaction of the Yang-Mills field.
+
+In (\ref{MM:8.8}) we have defined the Yang-Mills action $\ymf$ in the domain $\mc{A}(P).$ This domain is an affine
+space and hence is contractible. But there is a large symmetry group acting on this space. This is the group $\mc{G}$
+of gauge transformations of $P.$ By definition, a gauge transformation $\phi \in \mc{G}$ is an automorphism of the
+bundle $P$, which covers the identity map of $M$ and hence leaves each $x\in M$ fixed. Under this gauge transformation,
+the gauge field transforms as
+$$
+F_{\om} \mapsto F^{\phi}_{\om}:=\phi^{-1}F_{\om} \phi.
+$$
+
+Therefore, the pointwise norm $\abs{F_{\om}}$ is a gauge invariant. It follows that the Yang-Mills action $\ymf(\om)$
+is gauge invariant and hence induces a functional on the moduli space $\mc{M}=\mc{A}/\mc{G}$ of gauge connections. This
+functional is also called the Yang-Mills functional (or action). In order to relate the topology of the moduli space
+$\mcm$ to the critical points of the Yang-Mills functional, it is necessary to compute the second variation or the
+Hessian of the \ym action,
+$$
+\del^{2}\ymf(\om):=\frac{d^{2}}{dt^{2}}\ymf(\om_{t})|_{t=0}.
+$$
+
+One can verify that the Hessian, viewed as a symmetric, bilinear form, is given by the following expression:
+$$
+\del^{2}\ymf (\om )(A,B)=2\int_{M}\var{\inp{\dom A}{\dom B}+\inp{\fom}{A \wed B}},
+$$
+
+Analysis of the Yang-Mills equations then proceeds by obtaining various estimates using these variations.
+
+We note that, if $\phi \in \aut{P}$ covers a conformal transformations of $M$ (also denoted by $\phi$), then thus
+$\phi \in \diff{M}$ induces a conformal change of metric which is given by
+\begin{equation}
+ \label{MM:8.17}
+ \phi^{*}g=e^{2f}g, \ f \in \mc{F}(M).
+\end{equation}
+
+Neither the pointwise norm $\abs{\fom}_{x}$ nor the Riemannian volume form $v_{g}$ are invariant under this conformal
+change and the integrand in the \ym action transforms as follows:
+\begin{equation}
+ \label{MM:8.18}
+ \abs{\fom}^{2}_{x}dv_{g}\mapsto \var{e^{-4f}\abs{\fom}^{2}_{x}}(e^{mf}dv_{g}).
+\end{equation}
+
+It follows that, in the particular case of $m=4$, the \ym action is invariant under the generalized gauge
+transformations which cover conformal transformations of M.
+
+A large number of solutions of the Yang-Mills equations are known for special manifolds. For example, the universal
+connections on Stiefel bundles provide solutions of pure (sourceless) \ym equations. As we observed in the precious
+section, the natural connections associated to the complex Hopf fibrations are particular cases of the Stiefel bundles.
+
+Let $A$ be the local gauge potential corresponding to the universal connection $\om$ on the Stiefel bundle
+$V_{k}(F^{n})(G_{k}(F^{n}), U_{F}(k))$ with gauge group $U_{F}(k)$ and let $\fom=\dom A$ be the corresponding gauge
+field. The basic computation involves an explicit local expression for $\hdg \fom$, the Hodge dual of the gauge field
+$F_{\om}$. In the complex case, it can be shown that $\hdg \fom$ is represented by an invariant polynomial of degree
+$kl-1$, $l=n-k$ in $\fom$, i.e.
+$$
+\hdg F = a F^{\wed kl-1},
+$$
+where $a$ is a constant. Thus expression, together with the Bianchi identities, imply
+\begin{equation}
+ \label{MM:8.19}
+ \dom \hdg \fom =0.
+\end{equation}
+
+In the quaternion case, a similar expression for $\hdg \fom$ leads to the equation (\ref{MM:8.19}). In the real case,
+the expression for $\hdg F_{\om}$ also involves the gauge potential explicitly. These terms can be written as a wedge
+product of certain $l$-forms $\psi$, which satisfy the conditions $d^{A}\psi=0$. As a consequence of the Mauer-Cartan
+equation this, together with the Bianchi identities, implies (\ref{MM:8.19}) as in the complex case.
+
+Let $M$ be a compact, oriented Riemannian manifold of dimension 4. Let $P(M, G)$ be a principal bundle over $M$ with
+compact semisimple Lie group $G$ as  structure group. Recall that the Hodge star operator on $\Lam(M)$ has a natural
+extension to the bundle valued forms. A form $\alp \in \Lam^{2}(M, \ad{}P)$ is said to be \emph{self-dual} (resp.
+\emph{anti-dual}) if
+$$
+\hdg \alp = \alp \ (\text{resp. } \hdg \alp = - \alp).
+$$
+
+We define the \emph{self-dual part} $\alp_{+}$ of a form $\alp \in \Lam^{2}(M, \ad{} P)$ by
+$$
+\alp_{+}:= \frac{1}{2}(\alp + \hdg \alp).
+$$
+Similarly, the \emph{anti-dual part} $\alp_{-}$ of a form $\alp \in \df{2}{M, \ad{ }P}$ is defined by
+$$
+\alp_{-}:= \frac{1}{2}(\alp - \hdg \alp).
+$$
+
+Over a four dimensional base manifold, the second Chern class and the Euler class of P are equal and we define the
+\emph{instanton number} $k$ of the bundle $P$ by
+\begin{equation}
+ \label{MM:8.20}
+ k:= -c_{2}(P)[M]= - \chi(P)[M].
+\end{equation}
+recall that $F=\fom$ is the curvature form of the gauge connection $\om$, and hence, by the theory of characteristic
+classes, we have
+\begin{equation}
+ \label{MM:8.21}
+ k:=-c_{2}(P)[M] = -\frac{1}{8\pi^{2}} \int_{M} \Tr(F \wed F).
+\end{equation}
+
+Decomposing $F$ into its self-dual part $F_{+}$ and anti-dual part $F_{-}$, we get
+\begin{equation}
+\label{MM:8.22}
+ k=\frac{1}{8\pi^{2}}\int_{M}\var{\abs{F_{+}}^{2}-\abs{F_{-}}^{2}}.
+\end{equation}
+
+Using $F_{+}$ and $F_{-}$ we can rewrite the \ym action \req{MM}{8.8} as follows:
+\begin{equation}
+ \label{MM:8.23}
+ \ymf(\om)=\frac{1}{8\pi^{2}}\int_{M}\var{\abs{F_{+}}^{2}+\abs{F_{-}}^{2}}.
+\end{equation}
+
+Comparing equations \req{MM}{8.22} and \req{MM}{8.23} above we see that \ym action is bounded below by the absolute
+value of the instanton number, i.e.
+\begin{equation}
+ \label{MM:8.24}
+ \ymf(\om)\geq \abs{k}, \ \forall \om \in \mc{A}(P).
+\end{equation}
+
+When $M$ is four dimensional, we can associate to the pure \ym equations the first order \emph{instanton} (resp.
+\emph{anti-instanton}) \emph{equations}
+\begin{equation}
+ \label{MM:8.25}
+ \fom =\hdg \fom \ (\text{resp. } \fom=-\hdg \fom).
+\end{equation}
+
+The Bianchi identities imply that any solution of the instanton equations is also a solution of the \ym equations. The
+fields satisfying $\fom= \hdg \fom$ (resp. $\fom = - \hdg \fom$) are also called \emph{self-dual} (resp.
+\emph{anti-dual}) \ym fields. We note that a gauge connection satisfies the instanton or the anti-instanton equation if
+and only if it is the absolute minimum of the \ym action. It can shown that the instanton equations are also invariant
+under the generalized gauge transformations, which cover conformal transformations of $M$. This result plays a crucial
+role in the construction of the moduli space of instantons.
+
+
+We now give two examples of \ym fields on $S^{4}$ obtained by gluing two potentials along the equator.
+
+\begin{exmp}
+ We consider the two standard charts $U_{1}, U_{2}$ on $S^{4}$ and define the $SU\left( 2 \right)$ principal bundle
+$P_{1}(S^{4}, SU(2))$ by the transition function
+$$
+g:U_{1} \cap U_{2} \to SU(2), \ x \mapsto x/\abs{x}
+$$
+where $x\in \R^{4}$ is identified with a quaternion. Essentially, the transition function $g$ defines a map of the
+equator $S^{3}$ into $SU(2),$ i.e., an element of the homotopy group $[g] \in \pi_{3}(SU(2)) \cong \Z.$ In fact, $[g]$
+is non-trivial, corresponding to the non-triviality of the bundle $P_{1}.$ A connection $A \in \mca (P_{1}(S^{4},
+SU(2)))$ is specified by data consisting of a pair of $\mfk{su}(2)$-valued 1-forms $A^{i}$ on $U_{i}, \ i=1,2$, which,
+when restricted to $U_{1}\cap U_{2}$, obey the cocycle condition
+$$
+A^{1}(x)=g(x)A^{2}g^{-1}(x)+g(x)dg^{-1}(x).
+$$
+For each $\lam \in (0,1)$ define the connection $A^{\lam}=(A^{\lam}_{1}, A^{\lam}_{2})$ by
+$$
+A^{\lam}_{1}= \op{Im}\var{\frac{xd\tilde{x}}{\lam^{2}+\abs{x}^{2}}}, \
+A^{\lam}_{2}= \op{Im}\var{\frac{\lam^{2}\tilde{x}d{x}}{\abs{x}^{2}\var{\lam^{2}+\abs{x}^{2}}}}.
+$$
+
+The connection $A^{\lam}$ is self dual with instanton number 1. The curvature of this connection $A^{\lam}$ is
+$F^{\lam+}=\var{F_{1}^{\lam +}, F_{2}^{\lam +}}$ given by
+$$
+F_{1}^{\lam +}= \op{Im}\var{\frac{\lam^{2}dx \wed d\tilde{x}}{(\lam^{2}+\abs{x}^{2})^{2}}},
+F_{2}^{\lam +}= \op{Im}\var{\frac{\lam^{2}\tilde{x}dx \wed x d\tilde{x}}{\abs{x}^{2}(\lam^{2}+\abs{x}^{2})^{2}}}.
+$$
+\end{exmp}
+
+
+
+
+

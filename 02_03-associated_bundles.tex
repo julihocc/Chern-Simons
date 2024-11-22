@@ -1,0 +1,222 @@
+\section{Associated bundles and particles}
+
+Let $P$ be a principal $G-$bundle and $F$ a smooth manifold on which $G$ acts smoothly from the left. Let $P \times F$
+be the direct product and identify two elements $(p_{1}, f_{1}) \sim (p_{2}, f_{2})$ if and only if $(p_{1}g,
+g^{-1}f_{1})= (p_{2},f_{2})$ for some $g \in G.$
+
+This action of $G$ is free and transitive since the action of $G$ on $P$ is thus. Therefore, the quotient $P \times_{G}
+F$ is a manifold and even a fiber bundle with fiber $F$ under the projection map $\pi(p,f)= \pi(p).$
+
+\begin{defn}
+ \label{JB:4.1}
+ The bundle $P \times_{G} F$ is called an associated bundle of $P$.
+\end{defn}
+
+It can be shown that local sections of $P$ induce local trivialisations of $P \times_{G} F.$ If $F=V$ is a
+finite-dimensional real or complex vector space, then the fibers of $P \times_{G} F$ inherit the same structure if we
+define
+$$
+[(p,v_{1})]+[(p,v_{2})]=[p, v_{1}+v_{2}], \ \lam[(p,v)]=[p, \lam v],
+$$
+with $\ p\in P, v_{1},v_{2}, v \in V, \lam \in \R \text{ or } \lam \in \C.$
+
+We can introduce particle fields to a gauge theory by introducing an associated vector bundle of $P.$ Sections of this
+associated bundles are interpreted as the particle fields.
+
+\begin{exmp}
+ Let $G=SU(2)$ and consider the fundamental representation $\rho: SU(2) \to GL_{2}(\C).$ Then $\Gamma(P \times _{SU(2)}
+\C^{2})$ form a $C^{\infty}(M)-$module of a particle fields that are $\C^{2}-$valued locally.
+\end{exmp}
+
+If $E$ is an associated vector bundle of $P$ with fiber $V,$ the $C^{\infty}(M)-$module of sections
+$\Gamma^{\infty}(E)$ can be identified with $V-$valued $G-$equivariant functions on $P.$
+
+\begin{lem}
+ \label{JB:4.3}
+In general, if $P$ is a $G-$principal fiber bundle and $E=P \times_{G} V$ is an associated vector bundle, there is a
+natural isomorphism of $$C^{\infty}(M)\text{-modules}\cong C^{\infty}(P)^{G}\text{-modules},$$ between $\Gamma(M, E)$
+and $C^{\infty}(P, V)^{G},$ where the last space is the space of all $G$-equivariant $V$-valued functions on $P.$ A
+function $f: P \to V$ is called $G$-equivariant if for all $g \in G$ and $p \in P,$ $f(pg)=g^{-1}\cdot f(p).$
+\end{lem}
+ \begin{proof}
+  Let $f$ be such an equivariant function. Then $s \in \Gamma(M, E)$ is defined by $s(x)=[p, f(p)],$ where $\pi(p)=x.$
+Since $f$ is $G$-invariant this is well-defined:
+$$
+[pg, f(pg)]=[pg, g^{-1}\cdot f(p)]=[p. f(p)],
+$$
+so that $s(x)$ is independent of the choice of $p$ in the fiber of $x.$
+
+Conversely, given $s \in \Gamma(M, E),$ a $G$-equivariant function $f: P \to V$ is defined by $s(x)=[p, f(p)].$
+ \end{proof}
+
+\begin{rem}
+ \begin{itemize}
+  \item The isomorphism $C^{\infty}(M)\cong C^{\infty}(P)^{G}$ is just a spacial case of this lemma, where $G$ acts
+trivially on $\C.$ Note that $f \in C^{\infty}(M)$ can be identified with a $G$-invariant function $\tilde{f}$ on $P$
+through $\tilde{f}=f \comp \pi.$
+\item If we want to check that the constructed $f$ or $s$ are smooth, we need the fact that the action of $G$ on
+$P\times V$ is proper and free. This implies that $E=P\times_{G} V$ has a natural smooth structure with respect to the
+quotient topology (note that in the text we already used the fact that E is smooth).
+
+Moreover, with this smooth structure the quotient map $P \times V \to E$ is smooth and $P \times V$ is a principal
+fiber bundle over $E.$ Using the fact that locally the quotient map $P\times V\to E$ has a smooth inverse (namely, a
+smooth local section from $E$ to $P \times V$) we can show that the defined $s$ or $f$ in the proof of the lemma are
+smooth if and only if the other is smooth. 
+ \end{itemize}
+
+\end{rem}
+
+This identification is very useful: to study sections of associated bundles, it is enough to consider equivariant
+functions on $P.$ From now on, we will implicitly make this identification. Using this identification, we can carry
+over structures on $P$ to similar structures on the associated bundles. One of these structures is the connection. It
+induces a covariant derivative on associated vector bundles.
+
+\begin{defn}[\cite{DB}, 3.1.2]
+\label{JB:4.4}
+ Let $\rho: G \to GL(V)$ be a finite-dimensional representation of $G.$ Given a connection $\om,$ we can introduce the
+space $ \dfp{k}{V}$ of differential forms on $P$ such that $\phi(X_{1}, ..., X_{k})=0$ if one of the $X_{i}$ is a
+vertical vector field, and $R^{*}_{g}\phi=g^{-1}\phi.$ 
+\end{defn}
+
+The \emph{vertical condition} implies that we are actually considering forms on the manifold $M$ and the equivariance
+condition means that we are considering sections of the associated bundle $\Gamma(P \times_{G} V).$
+
+\begin{prop}
+ \label{JB:4.5}
+Two connections $\om, \om^\prime$ differ by an element in $\dfp{1}{\mfk{g}}.$
+\end{prop}
+\begin{proof}
+ It can be checked that $(\om-\om^\prime)(X)=0$ on vertical fields $X=A^{*}$ by the first condition in def.
+\ref{JB:3.2}. The property $R_{g}^{*}(\om-\om^\prime)=\op{ad}_{g^{-1}}(\om-\prm{\om})$ follows from the second
+condition in the same definition.
+\end{proof}
+
+\begin{cor}
+\label{JB:4.6}
+ For a given $\om$ the space $\overline{\Lam^{1}}(P, \mfk{g})$ is in one-to-one correspondence with the space of all
+connection 1-forms $\mc{C}$ on $P,$ through the assignment $\tau \mapsto \tau + \om.$
+\end{cor}
+
+A connection on a principal bundle $P$ naturally induces a connection on any associated bundle $E=P\times_{G} V.$
+
+\begin{defn}[\cite{DB}, 3.1.3]
+\label{JB:4.7}
+For a connection $\om$, the covariant derivative on $P \times_{G} V$ is defined by
+$$
+D_{\om}\phi = (d\phi)^{H},
+$$
+\end{defn}
+
+This is indeed a map $\dfp{\bullet}{V} \to \dfp{\bullet + 1}{V},$ since
+\begin{align*}
+R^{*}_{g} D_{\om} \phi &= R_{g}^{*}(d\phi)^{H} \\
+&=(R_{g}^{*}d\phi)^{H} \\
+&=(dR_{g}^{*}\phi)^{H} \\
+&=(d(\op{ad}_{g^{-1}})\phi)^{H} \\
+&=\op{ad}_{g^{-1}}(d\phi)^{H}.
+\end{align*}
+
+If $\mfk{g}$ acts on $V,$ then we have an action of $\tilde{\Om}(P, \mfk{g})$ on $\tilde{\Om}(P,V)$ given by
+$$
+(\phi \dot{\wed} \tau)(X_{1},...,X_{k+l})=
+\sum_{\sig \in S_{k+l}} (-1)^\sig \phi(X_{\sig(1)},...,X_{\sig(k)})\cdot
+\tau(X_{\sig(k+1)},...,X_{\sig(k+l)}),
+$$
+where $\phi \in \tilde{\Om}(P, \mfk{g})$ and $\tau \in \tilde{\Om}(P, V).$
+
+In this way, the set $\Om(P, \mfk{g})= \Om(P) \otimes \mfk{g}$ is a differential graded Lie-algebra, where $\mfk{g}$
+acts on itself in the adjoint representation. We will denote $[\phi_{1}, \phi_{2}]=\phi_{1}\dot{\wed}\phi_{2}.$
+
+With a differential graded Lie-algebra we mean that the bracket $[\cdot, \cdot]$ satisfies
+\begin{enumerate}[(i)]
+ \item $[\phi_{1}, \phi_{2}]=-(-1)^{kl}[\phi_{2}, \phi_{1}]$
+\item $(-1)^{mk}\lie{\lie{\phi_{1}}{\phi_{2}}}{\phi_{3}}+ (-1)^{lk}\lie{\lie{\phi_{2}}{\phi_{3}}}{\phi_{1}}
++(-1)^{lm}\lie{\lie{\phi_{3}}{\phi_{1}}}{\phi_{2}}=0$
+\item $d\lie{\phi_{1}}{\phi_{2}}=\lie{d\phi_{1}}{\phi_{2}}+(-1)^{k}\lie{\phi_{1}}{d\phi_{2}}.$
+\end{enumerate}
+
+\begin{thm}[\cite{DB}, 3.1.5]
+ \label{JB:4.8}
+For $\tau \in \dfp{k}{V},
+\nab_{\om}\tau=d\tau + \om \dwed \tau.
+$
+\end{thm}
+
+\begin{proof}
+ This can be proved point-wise, so if $v_{p}\in T_{p}P$ is horizontal, we can assume that $v_{p}=X_{p},$ where $X$ is a
+$G$-invariant horizontal vector field. Similarly, if $v_{p} \in T_{p}$ is vertical, we can assume that
+$v_{p}=A^{*}_{p}$ for some $A \in \mfk{g}.$
+
+If all the fields $X_{1},...,X_{k}$ are horizontal, then $(\om \dwed \tau)(X_{1},...,X_{k})=0$ and $X_{i}^{H}=X_{i},$
+so that both sides coincide.
+
+If at least two vector fields of the $X_{1},...,X_{k+1}$ are vertical at the point $p$ and are extended to fundamental
+vector fields, and the other vector are extended to $G$-invariant horizontal fields, the $\nab_{\om}\tau=0=\om \dwed
+\tau,$ so we must show that $d\tau=0.$ We have
+\begin{multline*}
+ d\tau(X_{1},...,X_{k+1})= \sum_{i=1}^{k+1} (-1)^{i+1} X_{i}(\tau(X_{1},...,\hat{X}_{i},...,X_{k+1})) \\
++ \sum_{i<j} (-1)^{i+j} \tau(\lie{X_{i}}{X_{j}},X_{2},..., \hat{X}_{i},...,\hat{X}_{j},...,X_{k+1}),
+\end{multline*}
+which is zero when at least two of the $X_{i}$ are vertical, because $\lie{A^{*}}{B^{*}}=\lie{A}{B}^{*}.$
+
+If precisely one of the $X_{i}$ is vertical, say $X_{1},$ then $[X_{1},X_{i}]=0$ for all $i$ and one needs to show that
+$$
+X_{1}(\tau(X_{2},...,X_{k}))+\om(X_{1})\cdot \tau(X_{2},...,X_{k})=0,
+$$
+which follows from $(g_{t}=\exp(tA))$
+\begin{align*}
+ X_{1}(\tau(X_{2},...,X_{k})) &= \frac{d}{dt}[\tau(R_{g_{t}*}X_{2},...,R_{g_{t}*}X_{k+1})]\\
+&=\frac{d}{dt}[g_{t}^{-1}\cdot\tau(X_{2},...,X_{k})] \\
+&=-A\cdot \tau(X_{2},...,X_{k+1}) \\
+&=-\om(X_{1})\cdot \tau(X_{2},...,X_{k+1}).
+\end{align*}
+The theorem now follows by linearity.
+\end{proof}
+
+
+\begin{cor}
+ If $\tau \in \dfp{\bullet}{\mfk{g}},$ then $\nab_{\om}\tau= d\tau + \lie{\om}{\tau}.$
+\end{cor}
+
+\begin{prop}
+ \label{JB:4.10}
+For $\tau \in \dfp{\bullet}{V},$ $\nab^{2}_{\om}\tau=F_{\om}\tau,$ where $F_{\om}=d\om + \frac{1}{2}\om \dwed \om \in
+\dfp{2}{\mfk{g}}$ is the curvature of $\nab_{\om}.$
+\end{prop}
+\begin{proof}
+ One checks that
+\begin{align*}
+ \nab_{\om}(d\tau+\om \dwed \tau)&=d^{2}\tau + d\om \dwed \tau - \om \dwed d\tau + \om \dwed d\tau+ \om \dwed (\om \dwed
+\tau)\\
+&= d\om \dwed \tau + \frac{1}{2}(\om \dwed \om) \dwed \tau. 
+\end{align*}
+It remains to check that $F_{\om}(X_{1},X_{2})= (d\om+\frac{1}{2}\lie{\om}{\om})\lie{X_{1}}{X_{2}}$ vanishes when
+either $X_{1}$ or $X_{2}$ is vertical. This is again a point-wise calculation, so we assume that $X_{1}=A^{*}.$ Note
+that $\lie{\om}{\om}(X_{1},X_{2})=2\lie{\om(X_{1})}{X_{2}}=2\lie{\om(X_{1})}{\om(X_{2})}$ so that
+\begin{align*}
+ F_{\om}(X_{1},X_{2}) &= d\om(X_{1}, X_{2})+ \lie{\om(X_{1})}{\om(X_{2})} \\
+&= X_{1}(\om(X_{2}))-X_{2}(\om(X_{1}))-\om(\lie{X_{1}}{X_{2}})+\lie{\om(X_{1})}{\om(X_{2})}.
+\end{align*}
+Since $\om(X_{1})=A$ is constant, the second term vanishes. It remains to show that
+$X_{1}(\om(X_{2}))-\om(\lie{X_{1}}{X_{2}})+\lie{\om(X_{1})}{\om(X_{2})}=0$. If $X_{2}$ is $G$-invariant horizontal, all
+terms are zero. If $X_{2}=B^{*}$ for some $B \in \mfk{g},$ then $X_{1}(\om(X_{2}))=0$ and
+$\om(\lie{X_{1}}{X_{2}})=\lie{\om(X_{1})}{\om(X_{2})}$ because $[A^{*}, B^{*}]=\lie{A}{B}^{*}.$
+\end{proof}
+
+\begin{prop}[Bianchi identity]
+ \label{bianchi}
+$\nab_{\om}F_{\om}=0.$
+\end{prop}
+\begin{proof}
+ Note that
+\begin{align*}
+ \nab_{\om}F_{\om}&=dF_{\om}+\lie{F_{\om}}{\om} \\
+&=d^{2}\om + \frac{1}{2}d(\lie{\om}{\om})+\lie{\om}{d\om}+\lie{\om}{\lie{\om}{\om}} \\
+&=\frac{1}{2}d(\lie{\om}{\om})+\lie{d\om}{\om}=0,
+\end{align*}
+since $d(\lie{\om}{\om})=\lie{d\om}{\om}-\lie{\om}{d\om}=-2\lie{\om}{d\om}.$ We also used the Jacobi identity to show
+that $\lie{\om}{\lie{\om}{\om}}=0.$
+\end{proof}
+
+
+

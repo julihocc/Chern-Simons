@@ -1,0 +1,78 @@
+\section{The Homogeneous Maxwell's Equations}
+
+Instead of treating the magnetic field as a vector $B=(B_{1}, B_{2}, B_{3})$ we will treat it as a 2-form
+\begin{equation}
+ \label{SA:4.1}
+B=\sumi{n} B_{\sn{1}} dx^{\sn{2}} \wed dx^{\sn{3}}.
+\end{equation}
+Similary, instead of treating the electric field as a vector $E=(E_{1},E_{2},E_{3}),$ we will teat it as a 1-form
+\begin{equation}
+ \label{SA:4.2}
+E=\sumi{k}E_{k}dx^{k}.
+\end{equation}
+
+Assume that $M$ is a semi-Riemmanian Manifold equipped with Minkowski, i.e., as a 4-dimensional Lorentzian manifold or \emph{spacetime.} Furthermore, we shall assume that the spacetime $M$ can be split into 3-dimensional manifold $S,$ ``space'', with a Riemmanian metric and another space $\R$ for time. Then,
+$$
+M=\R \times S.
+$$
+
+Let $x^{i}, \ i \in I_{3}$ denote local coordinates on an open subset $U \subset S,$ and let $x^{0}$ denote the
+coordinate on $\R,$ then the local coordinates on $\R \times U \subset M$ will be those given by
+$x^{\alp}=(x^{0},...,x_{3})=(t,x).$ with the metric defined $\eta_{\alp \bet}$ by (\ref{GF:1.1}).
+
+We can then combine the electric and magnetic fields into a unified electromagnetic field $F,$ which is a 2-form on $\R \times U \subset M$ defined by
+\begin{equation}
+ \label{SA:4.3}
+F=B+E\wed dx^{0}.
+\end{equation}
+In comoponent form we have
+\begin{equation}
+ \label{SA:4.4}
+F=\frac{1}{2}F_{\alp \bet} dx^{\alp} \wed dx^{\bet},
+\end{equation}
+where $F_{\alp \bet}$ is given by (\ref{maxwell:cov_tensor}). 
+
+Explicity, we have
+\begin{equation}
+ \label{SA:4.5}
+F= \sumi{k}E_{k}dx^{k}\wed dx^{0} + B=\sumi{n} B_{\sn{1}}  dx^{\sn{2}} \wed dx^{\sn{3}}.
+\end{equation}
+
+
+Taking the exterior derivative if (\ref{SA:4.3}) we obtain
+\begin{equation}
+ \label{SA:4.6}
+dF=d(B+E\wed dx^{0})=dB+dE\wed dx^{0}.
+\end{equation}
+
+In general, for any differential form $\eta$ on spacetime, we have
+\begin{equation}
+ \label{SA:4.7}
+\eta=\eta_{I}dx^{I},
+\end{equation}
+where $I$ range over $I_{n}^{p}:=\set{A \subset I_{n} | \# A=p},$ and $\eta_{I}$ is a function of spacetime.
+
+Taking the exterior derivative of (\ref{SA:4.7}), we obtain
+\begin{align*}
+ d\eta &= \p_{\alp}\eta_{I}dx^{\alp}\wed dx^{I} \\
+&= \sumi{k}\p_{k}\eta_{I}dx^{k}\wed dx^{I} + \p_{0}\eta_{I}dx^{0}\wed dx^{I} \\
+&=d_{s}\eta \eta + dx^{0} \wed \p_{0}\eta,
+\end{align*}
+Then, $d=d_{s}+dx^{0}\wed \p_{0},$ where $d_{s}$ is the exterior derivative of space and $x^{0}=t.$
+
+Since $B,E$ are differential forms on a spacetime, we shall split the exterior derivative into spacelike part and timelike part. Using the identity above, we obtain the following form (\ref{SA:4.6})
+\begin{align*}
+ dF &= d_{s}B  + dx^{0}\wed \p_{0}B + (d_{s}E + dx^{0}\wed \p_{0}E) \wed dx^{0} \\
+&= d_{s}B + (d_{s}E+ \p_{0}B)\wed dx^{0} + dx^{0}\wed dx^{0} \wed \p_{0}E \\
+&= d_{s}B + (d_{s}E + \p_{0}B)\wed dx^{0}.
+\end{align*}
+
+Now, $dF=0$ is the same as
+\begin{align}
+ \label{SA:4.8}
+d_{s}B&=0\\
+\label{SA:4.9}
+d_{s}E+\p_{0}B&=0.
+\end{align}
+
+The equations (\ref{SA:4.8}) and (\ref{SA:4.9}) are exactly the same as (\ref{maxwell:gauss_mag}) and (\ref{maxwell:faraday}). Hence, the homogeneous Maxwell's equations correspond to the closed form $dF=0$ which is similar to the Jacobi identities (\ref{SA:1.35}).

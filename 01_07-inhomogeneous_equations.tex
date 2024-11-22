@@ -1,0 +1,130 @@
+\section{Inhomogeneous Mawxwell's Equations}
+
+Starting from (\ref{SA:4.5}) and using the relations:
+\begin{equation}
+ \label{SA:3.19}
+\hdg(dx^{\sn{1}}\wed dx^{0})=dx^{\sn{2}}\wed dx^{\sn{3}}, \ n\in I_{3}.
+\end{equation}
+we obtain: 
+\begin{equation}
+ \label{SA:4.12}
+\hdg F = \sumi{n} E_{\sn{1}}dx^{\sn{2}}\wed dx^{\sn{3}} - \sumi{k} B_{k} dx^{k} \wed dx^{0},
+\end{equation}
+or 
+\begin{equation}
+ \label{SA:4.13}
+\hdg F = \frac{1}{2} (\hdg F)_{\alp \bet} dx^{\alp} \wed dx^{\bet}
+\end{equation}
+where
+\begin{equation}
+ \label{SA:4.14}
+(\hdg F)_{\alp \bet}=
+\begin{bmatrix}
+ 0 & B_{1} & B_{2} & B_{3} \\
+-B_{1} & 0 & E_{3} & -E_{2} \\
+-B_{2} & -E_{3} & 0 & E_{1} \\
+-B_{3} & E_{2} & -E_{1} & 0 
+\end{bmatrix}.
+\end{equation}
+
+Thus, the effect in (\ref{maxwell:cov_tensor}) of the dual operator on $F$ amounts to the exchange 
+$$
+E_{i} \mapsto -B_{i}, \ B_{i} \mapsto E_{i}, \ i \in I_{3}.
+$$
+
+Combining the charge density $\rho$ and the current density $J$ into a unified vector field on Minkowski spacetime, we 
+obtain
+\begin{equation}
+ \label{SA:4.15}
+\tb{J}=J^{\alp}\p_{\alp}=\rho\p_{0}+J^{1}\p_{1}+J^{2}\p_{2}+J^{3}\p_{3}.
+\end{equation}
+
+Using the result of example \ref{SA:3.1.2}, with Minkowski metric (\ref{GF:1.1}), we obtain the 1-form
+\begin{equation}
+ \label{SA:4.16}
+J=J_{\bet}dx^{\bet}=\sumi{k}J^{k}dx^{k}-\rho dx^{0},
+\end{equation}
+where 
+\begin{equation}
+ \label{SA:4.17}
+J_{\bet}=\eta_{\alp \bet}J^{\alp}.
+\end{equation}
+
+Let $\hdgs$ denote the Hodge star operator on space, using relations
+\begin{equation}
+ \label{SA:3.17}
+dx^{\sn{1}}=\hdg (dx^{\sn{2}}\wed dx^{\sn{3}}), \ n\in I_{3},
+\end{equation}
+we can see that (\ref{SA:4.12}) is the same as 
+\begin{equation}
+ \label{SA:4.18}
+\hdg F = \hdgs E -\hdgs B \wed dx^{0}
+\end{equation}
+which amounts to the exchange
+$$
+E\mapsto - \hdgs B, \ B \mapsto \hdgs E,
+$$
+in (\ref{SA:4.3}), taking the exterior derivative of (\ref{SA:4.18}) and applying the Hodge star operator, we obtain
+\begin{equation}
+ \label{SA:4.20}
+\hdg d \hdg F = - \hdgs d_{s} \hdgs E \wed dx^{0} - \p_{0}E + \hdgs d_{s} \hdgs B.
+\end{equation}
+
+If we set $\hdg d \hdg F = J$ and equate components, we obtain 
+\begin{align}
+ \hdgs d_{s} \hdgs E &= \rho \\
+-\p_{0} E + \hdgs d_{s} \hdgs B &= J^{i}dx^{i}, \ i \in I_{3},
+\end{align}
+which is exactly the inhomogeneous Maxwell's equations (\ref{maxwell:gauss}) and (\ref{maxwell:ampere}). 
+
+Thus, the Maxwell's equations have been rewritten as the following ones
+%\begin{empheq}[left=\empheqlbrace]{align}
+%\label{maxwell:homogeneous}
+%&dF = 0 \\
+%\label{maxwell:inhomogeneous}
+%&\hdg d \hdg F = J
+%\end{empheq}
+\begin{align}
+ \label{maxwell:homogeneous}
+dF &= 0 \\
+\label{maxwell:inhomogeneous}
+\hdg d \hdg F &= J
+\end{align}
+
+
+
+The continuity equation in differential form will be derived from (\ref{maxwell:inhomogeneous}).
+
+From prop. \ref{SM:4.7},we obtain $\hdg^{2}=1.$ Applying $d \hdg$, to (\ref{maxwell:inhomogeneous}), we obtain 
+\begin{equation}
+ \label{SA:4.29}
+d \hdg J = dd \hdg F = 0. 
+\end{equation}
+
+Using the relations
+\begin{equation}
+ \label{SA:3.23}
+\hdg dx^{\sne{0}} + \sumi{n} dx^{\sne{1}}\wed dx^{\sne{2}} \wed dx^{\sne{3}}= 0,
+\end{equation}
+where $\sne{\cdot}=(1 \ 2 \ 3 \ 0)^{n} \in S_{4},$ we obtain, with $J^{0}=\rho,$
+\begin{equation}
+\label{SA:4.30}
+ \hdg J = \sum_{n \in I_{4}} (-1)^{n} J^{\sne{0}} dx^{\sne{1}} \wed dx^{\sne{2}} \wed dx^{\sne{3}}. 
+\end{equation}
+Operating the exterior derivative on (\ref{SA:4.30}), we obtain
+\begin{equation}
+ \label{SA:4.32}
+d \hdg J = \sum_{k \in I_{4}} \p_{k}J^{k} dx^{0}\wed...\wed dx^{3}.
+\end{equation}
+
+Therefore $d \hdg J =0$ correspond to
+\begin{equation}
+\label{SA:4.33}
+\sum_{k \in I_{4}} \p_{k}J^{k} =0,
+\end{equation}
+which is exactly the continuity equation (\ref{maxwell:continuity_eq}).
+
+
+
+
+

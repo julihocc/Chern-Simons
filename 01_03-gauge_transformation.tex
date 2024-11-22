@@ -1,0 +1,31 @@
+\section{Gauge transformation}
+
+Equations (\ref{SA:1.21}) and (\ref{SA:1.23}) show that $A$ determines $B,$ as well as part of $E.$ Notice that $B$ eis left invariant by the transformation
+\begin{equation}
+\label{SA:1.40}
+A \mapsto A'=A + \nab \chi,
+\end{equation}
+for any scalar function $\chi.$ The invariance of $E$ es accomplished by the transformation 
+\begin{equation}
+\label{SA:1.41}
+\Phi \mapsto \Phi'=\Phi- \pt{\chi}.
+\end{equation}
+
+The transformations (\ref{SA:1.40}) and (\ref{SA:1.41}) are called \emph{gauge transformations,} and the invariance of the fields under such transformations is called \emph{gauge invariance.}
+
+In the lenguage of covariance, we see that $A^{\alpha}=(\Phi, A)$ is not unique: the same electromagnetic field tensor $F^{\alpha \beta}$ can be obtained from potential
+\begin{equation}
+\label{SA:1.42}
+A^{\alpha}=\var{\Phi- \pt{\chi}, A + \nab \chi}.
+\end{equation}
+
+Substituting (\ref{SA:1.42}) into (\ref{SA:1.28}) we obtain
+\begin{align*}
+F^{\alpha \beta} &= \pu{\alpha}A^{\beta} + \pu{\alpha}\pu{\beta}\chi - \pu{\beta}A^{\alpha} - \pu{\beta}\pu{\alpha} \chi \\
+&= \pu{\alpha}A^{\beta} - \pu{\beta}A^{\alpha} + \comm{\pu{\alpha}}{\pu{\beta}} \chi \\
+&= \pu{\alpha}A^{\beta} - \pu{\beta}A^{\alpha},
+\end{align*}
+using the fact that $\comm{\pu{\alpha}}{\pu{\beta}}=0.$
+\begin{rem}
+The transformation $A^{\alpha} \mapsto {A'}^{\alpha}= A^{\alpha} + \pu{\alpha} \chi$ is a gauge transformation.
+\end{rem}

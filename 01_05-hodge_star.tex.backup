@@ -1,0 +1,106 @@
+\section{The Hodge Star Operator}
+
+\begin{defn}
+ \label{SA:3.2.1}
+The Hodge star operator is the unique linear map on a semi-Riemannian manifold from $p-$forms to $(n-p)-$forms defined
+by
+$$
+\hod: \Om^{p}(M) \to \Om^{(n-p)(M)},
+$$
+such that for all $\xi, \eta \in \Om^{p}(M)$,
+
+$$\xi \wed \hod \eta =\inp{\xi}{\eta}\mfk{Y}.$$
+\end{defn}
+
+
+This is an isomorphism between $p-$forms and $(n-p)-$forms, and $\hod \eta$ is called the dual of $\eta.$ Suppose that
+$dx^{1}, \cdots, dx^{n}$ are positively oriented orthonormal basis of 1-forms on some chart $(U_{\alp}, \phi_{\alp})$
+on a manifold M.
+
+Let $1 \leq i_{1} < \dots < i_{p} \leq n$ be an ordered distinct increasing indices and let $j_{1}< \dots <j_{n-p}$ be
+their complement in the set $\set{1,...,n}.$ Then
+\begin{equation}
+\label{SA:3.8}
+ dx^{i_{1}} \wed \cdots \wed dx^{i_{p}}\wed dx^{j_{1}}\wed \cdots \wed dx^{j_{n-p}}= \sgn(I)dx^{1}\wed \cdots \wed
+dx^{n},
+\end{equation}
+where, $\sgn(I)$ es the sign of the permutation
+$$
+\begin{pmatrix}
+i_{1} & ... & i_{p} & j_{1} & ... & j_{n-p} \\
+1 & ... & p & p+1 & ... & n
+\end{pmatrix}.
+$$
+ In other words, the wedge products of a $p-$forms and $(n-p)-$forms yield the volume form up to a sign.
+
+\begin{rem}
+ $\hod 1 \in \Om^{n}(M)$ is the volume form $\mfk{Y}$. For a domain $D\subset M,$ $\int_{D} \mfk{Y}$ is the volume of
+$D.$ In particular, if $M$ is compact, $\int_{M}\mfk{Y}$ is called the volume of $M.$
+\end{rem}
+
+We state the following proposition without proof:
+
+\begin{prop}[\cite{SM}, 4.7]
+ The $\hod-$ operator of Hodge has the following properties. For any $f, g \in C^{\infty}(M)$ and $\xi, \eta \in
+\Om^{p}(M)$ we have
+\begin{enumerate}[(i)]
+ \item $\hod(f\xi + g \eta)= f \hod \xi + g \hod \eta$
+\item $\hdg \hdg \xi = (-1)^{k(n-k)} \xi$
+\item $\xi \wed \hdg \eta= \eta \wed \hdg \xi$
+\item $\hdg (\xi \wed \hdg \eta)= \inp{\xi}{\eta}$
+\item $\inp{\hdg \xi}{\hdg \eta}=\inp{\xi}{\eta}$
+\end{enumerate}
+\end{prop}
+
+Now let $M$ be an oriented Riemannian manifold. For any $X \in \mfk{F}(M),$ let $\xi_{X}$ be the 1-form corresponding
+to $X$ by the isomorphism $\mfk{F}(M) \cong \Om^{1}(M).$ We set
+$$
+\dvg X = \hdg d \hdg \xi_{X}.
+$$
+It is called the \emph{divergence} of $X$. If $M$ comes with opposite orientation, $\hdg$ changes to $-\hdg.$ Since
+$\hdg$ appears twice in the definition of $\dvg,$ it follows that $\dvg X$ is defined independently of the coise of
+orientation.
+
+\emph{Let $I_{n}$ denote the set $\set{1,...,n}.$}
+
+\begin{exmp}
+ \label{SM:4.8}
+On the Euclidean space $\R^{n},$ to $X=\sum_{k \in I_{n}}u^{k}\p_{k},$ there correspond
+$\xi_{X}=\sum_{k \in I_{n}}u^{k}dx^{k}.$ Hence we
+get
+$$
+\dvg X = \p_{\alp}u^{\alp}
+$$
+by direct computation. This is the original definition of divergence.
+\end{exmp}
+
+We state the following theorem without proof:
+
+\begin{thm}[\cite{SM}, 4.9]
+ Let $M$ be an oriented compact Riemannian manifold. If $X$ is a vector field on $M,$ then we have the equality
+$$
+\int_{M} \dvg X \ \mfk{Y}_{M} = \int_{\p M} \inp{X}{n} \ \mfk{Y}_{\p M},
+$$
+where $n$ is the outward unit normal vector field on $\p M.$ In particular, if $M$ is a closed manifold, then
+$$
+\int_{M} \dvg X \ \mfk{Y}_{M} = 0.
+$$
+\end{thm}
+
+\begin{rem}
+ Let $d:\Om^{\star}(\R^{3}) \to \Om^{\star}(\R^{3})$ be the exterior derivative, $f\in C^{\infty}(M)$ and $A\in
+\Om^{1}(\R^{3})$. Then
+\begin{equation}
+ \label{SA:3.24}
+df=\sumi{k} \p_{k}f dx^{k}.
+\end{equation}
+
+Thus, for $dx=(dx^{1}, dx^{2}, dx^{3}),$
+\begin{equation}
+ \label{SA:3.25}
+df=\inp{\nab f}{dx}.
+\end{equation}
+
+
+\end{rem}
+

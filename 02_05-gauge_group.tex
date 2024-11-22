@@ -1,0 +1,62 @@
+\section{Gauge group and gauge algebra}
+
+The gauge group as the group of $G$-equivariant diffeomorphisms preserving the fibers $GA(P)=\set{f \in Diff(P)|
+f\text{ equivariant and }f \comp \pi =\pi}.$ This group is isomorphic to $C^{\infty}(P, G)^{G},$ where $G$ acts on
+itself in the adjoint representation, and $f \in GA(P)$ is related to an element $\tau \in C^{\infty}(M, G)^{G}$ by
+$f(p)=p\tau(p).$ We have isomorphisms $GA(P) \cong C^{\infty}(M, G) \cong \Gamma( P \times_{Ad} G).$
+
+The bundle $\op{Ad} P = P\times_{Ad}G $ is called the adjoint bundle of $P$ and it is obtained as an associated bundle
+of $P$ by the adjoint action of $G$ on itself. The fibers have the structure of a gauge since $\op{Ad} g \in Aut G,$
+for all $g \in G.$ The group structure of the fibers naturally induces a group structure on the section $\Gamma(M,
+\op{Ad}P.)$
+
+From now on we will work with the group $C^{\infty}(M, G)^{G}.$
+
+The group $C^{\infty}(M, G)^{G}$ acts on $\Gamma(P \times_{G} V)$ as $(f\phi)(p)=f(p)\phi(p)$ or more generally, on
+$\dfp{k}{V}$ as $(f\cdot \phi)=f(p)\cdot (X_{1},...,X_{k}).$ The covariant derivative transforms as $\nab_{\om} \mapsto
+f \nab_{\om}f^{-1}:=\nab_{\om}^{f}$, so that $f \cdot \nab_{\om}\phi = \nab_{\om}^{f}(f \phi).$ This implies that the
+curvature transforms as $F \mapsto f F f^{-1}$ and $\om$ as $\om \mapsto f df^{-1}+ f \om f^{-1}.$ Locally, f can be
+considered as a change of local trivialization $\sig \mapsto f \comp \sig.$
+
+Note that for any gauge transformation $f,$ the 1-form $f^{*}\om$ is again a connection. Two connections on $P$ are
+called equivalent if they are related by a gauge transformation as above.
+
+\begin{defn}
+ \label{JB:6.1}
+The gauge algebra is the Lie algebra of infinitesimal gauge transformation $\Gamma(M, \op{ad}P) \cong C^{\infty}(P,
+\mfk{g})^{G},$ where $G$ acts in the adjoint representation on $\mfk{g}.$ Here $\op{ad} P = P \times_{ad} \mfk{g}.$
+\end{defn}
+
+The Lie algebra structure on $\Gamma(M, \op{ad} P)$ is given by $$[H_{1}, H_{2}](p)=\lie{H_{1}(p)}{H_{2}(p)}.$$
+Moreover, there is a map $Exp: \Gamma(M, \op{ad} P) \to \Gamma(M, \op{Ad} P)$ given by
+$$
+\Exp(H)(p)=\exp(H(p)),
+$$
+which is well-defined since
+\begin{align*}
+\Exp(H)(pg) &= \exp H (pg) \\
+&=\exp(\op{ad}_{g^{-1}}H(p)) \\
+&=\op{Ad}_{g^{-1}}\exp (H(p)) \\
+&=\op{Ad}_{g^{-1}}(\Exp(H)(p)). 
+\end{align*}
+
+The gauge algebra acts on $\dfp{k}{V}$ as $$(H \cdot \phi)(X_{1},...,X_{k})=H(p)\cdot \phi(X_{1},...,X_{k}).$$
+Equivalently, it can be defined by $H\cdot \phi = \frac{d}{dt}(\Exp(tH)\cdot\phi)|_{t=0}.$
+
+\begin{defn}
+ \label{JB:6.2}
+The action functional for the matrix Lie groups is given by
+$$
+S\left( \om \right)= \int_{M} \Tr F_{\om} \wed \hdg F_{\om},
+$$
+where $\hdg$ denotes the Hodge star operator.
+\end{defn}
+
+If one looks for a local extremum, one finds the Yang-Mills equation:
+$$
+\nab_{\om}(\hdg F)=0,
+$$
+which is similar to the Bianchi identity $\nab_{\om}F=0,$ which is always satisfied. We will discuss the Yang-Mills
+equations in more detail in our next chapter.
+
+

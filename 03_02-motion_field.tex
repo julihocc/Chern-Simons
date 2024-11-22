@@ -1,0 +1,121 @@
+\section{Motion in an Electromagnetic Field}
+
+We have discussed above the geometric setting which characterizes source-free electromagnetic fields. On the other
+hand, the existence of an electromagnetic field has consequences for the geometry of the base space and this in turn
+affects the motion of test particles.
+
+First recall that an electrostatic field $E$ determines the differential of potential between two points by integration
+along a path joining them. It is therefore reasonable to think of $E$ as a 1-form on $\R^{3}$. Maxwell's fundamental
+idea was to introduce a quantity, called electric displacement, $D$ which has the propierty that its integral over a
+closed surface measures the charge enclosed by the surface. One should thus think of $D$ as a 2-form. In a uniform
+medium characterized by dielectric constant $\ep$, one usually writes the constitutive equations relating $D$ and $E$ as
+$$
+D=\ep E.
+$$
+
+However, our discussion indicates that this equation only makes sense if E is replaced by a 2-form. In fact, if we are
+given a metric on $\R^{3},$ there is natural way to associate with $E$ a 2-form, namely $\hdg E,$ where $\hdg$ is the
+Hodge operator. Then the above equation can be written in a mathematically precise form
+$$
+D=\ep(\hdg E).
+$$
+
+Conversely, requiring such a relation between $D$ and $E$, i.e., specifying the operator $\hdg: \Lam^{1}(\R^{3}) \to
+\Lam^{2}(\R^{3})$, is equivalent to giving a Euclidean metric on $\R^{3}$. Similarly, ne can interprete \emph{the
+magnetic tension} or \emph{induction} as a 2-form $B$ and Faraday's law then implies that $B$ is closed, i.e. $dB=0.$
+The law of motion of a charged test particle of charge $e$, moving in the presence of $B$, is obtained by a
+modification of the canonical symplectic form $\om$ on $T^{*}\R^{3}$ by the pull-back of $B$ by the canonical
+projection $\pi: T^{*}\R^{3} \to \R^{3}$, i.e. by using the form 
+$$
+\om_{e,B}=\om + e\pi^{*}B.
+$$
+
+The separate theories of electricity and electromagnetism were unified by Maxwell in his electromagnetic theory. To
+describe this theory for arbitrary fields, it is convenient to consider their formulation on the 4-dimensional
+Minkowski space-time $M^{4}.$ We define the two 2-forms $F$ and $G$ by
+$$
+F:=B+E \wed dt, \ G:=D-H\wed dt,
+$$
+where $B$ and $H$ are the magnetic tension and magnetic field respectively and $E$ and $D$ are the electric field and
+displacement respectively. If $J$ denotes the current 3-form, then Maxwell's equations with source $J$ are given by
+\begin{align*}
+ dF&=0\\
+dG & = 4 \pi J.
+\end{align*}
+ 
+The two fieldsn $F$ and $G$ are related by the constitutive equations which depend on the medium in which they are
+defined. In a uniform medium (in partiuclar, in vacuum), we can write the constitutive equations as 
+$$
+G=(\ep/\mu)^{1/2}\hdg F.
+$$
+
+If we choose the standard Minkowski metric, then we can write the source-free Maxwell's equations in a uniform medium as
+\begin{align*}
+ dF&=0 \\
+d \hdg F &= 0.
+\end{align*}
+The second equation is equivalent to $\delta F =0;$ we thus obtain the gauge field equations discussed earlier.
+
+
+It is well know that Hamilton's equation of motion of a particle in classical mechanics can be given a geometrical
+formulation by using the phase space $P$ of the particle. The phase space $P$ is, at least locally, the cotangent
+space $T^{*}Q$ of the configuration space $Q$ of the particle. We now show that this formalism can be extended to the
+motion of a charged particle in an electromagnetic field and leads to the equations of motions with the Lorentz
+force.We choose the configuration space $Q$ of the particle as the usual Minkowski space. The law of motion of a
+charged test particle with charge $e$ is obtained by considering the symplectic form
+$$
+\om_{e,F}=\om + e \pi^{*}F,
+$$
+where $\om$ is the canonical symplectic form of $T^{*}Q$ and $\pi:T^{*Q} \to Q$ is the canonical projection.
+
+The Hamiltonian is given by
+$$
+\Ham(q,p)=\frac{1}{2m}g^{ij}p_{i}p_{j},
+$$
+where $g_{ij}$ are the components of the Lorentz metric and $p_{i}$ are the components of 4-momentum. In the usual
+system of coordinates we can write the metric and the Hamiltonian as
+\begin{align*}
+ ds^{2}=& dq_{o}^{2}-dq_{1}^{2}-dq_{2}^{2}-dq_{3}^{2},\\
+\Ham(q,p)=\frac{1}{2m}(p_{o}^{2}-p_{1}^{2}-p_{2}^{2}-p_{3}^{2}).
+\end{align*}
+The matric of the symplectic form $\om_{e, F},$ in local coordinates $x^{\alp}=(q^{i}, p_{i})$ on $T^{*}Q$, can be
+written in block matrix form as
+$$
+\om_{e,F} =
+\begin{pmatrix}
+ eF & -I \\
+I & 0
+\end{pmatrix}.
+$$
+
+The Hamiltonian vector field is given by
+$$
+X_{\Ham}=(d\Ham)^{\sharp}=\frac{\p \Ham}{\p x^{\alp}} \om^{\alp \bet}_{e, F} \p_{\bet},
+$$
+where $\om^{\alp \bet}_{e, F}$ are the elements of $(\om_{e, F})^{-1}.$ The corresponding Hamilton's equations are
+given by
+$$
+\frac{dx^{\alp}}{dt}=X^{\alp}_{\Ham}=\om\frac{\alp \bet}{e, F}\frac{\p \Ham}{\p x^{\bet}}
+$$
+i.e.
+\begin{align}
+ \label{MM:8.4}
+\frac{dq^{i}}{dt}&=\frac{\p \Ham}{\p p_{i}} \\
+\label{MM:8.5}
+\frac{dp_{i}}{dt}&=-\frac{\p \Ham}{\p q^{i}}+eF_{ij}\frac{\p \Ham}{\p p_{i}}. 
+\end{align}
+
+Equation (\ref{MM:8.5}) implies that the 3-momentum $p=(p_{1}, p_{2}, p_{3})$ of the particle satisfies the equation
+\begin{equation}
+ \label{MM:8.6}
+\frac{dp}{dt}=\frac{e}{2m}(E + p \times B),
+\end{equation}
+where $E$ and $B$ are respectively the electric and magnetic fields. The equation (\ref{MM:8.6}) is the equation of
+motion of a charged particle in a electromagnetic field subject to the Lorentz force. Now electromagnetic field is a
+gauge field with abelian group $U(1).$
+
+The orbits of contragredient action of $U(1)$ on the dual of its Lie algebra  $\mfk{u}(1)$ are trivial. Identifying
+$\mfk{u}(1)$ and its dual with $\R,$ we see that an orbit through $e\in \R$ is the point $e$ itself. Thus, in this
+case, the choice of an orbit is the same thing as the choice of the unit of charge. This construction can be
+generalized to gauge fields with arbitrary structure group and, in particular, to the Yang-Mills fields to obtain the
+equations of motion of a particle moving in a Yang-Mills fields. 

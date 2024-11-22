@@ -1,0 +1,45 @@
+\section{Electromagnetic fields}
+
+A source-free electromagnetic field is the prototype of Yang-Mills fields. We will shoe that a source-free
+electromagnetic field is a gauge field with gauge group $U(1).$
+
+Let $P(M^{4}, U(1))$ be a principal $U(1)$-principal bundle over the Minkowski space $M^{4}.$ Any principal bundle over
+$M^{4}$ is trivializable. We choose a fixed trivialization of $P(M^{4},U(1))$ and use it to write $P(M^{4}, U(1)).$ The
+Lie algebra
+$$
+\mfk{u}(1)=\set{z \in \C | z = -\bar{z}}
+$$
+of $U(1)$ may identified with $i\R.$
+
+Thus a connection form on $P$ may be written as $i \om,$ $\om \in \Lam^{1}(P),$ by choosing $i$ as the basis of the Lie
+algebra $i\R.$ The gauge field can be written as $i  \Om,$ where $\Om = d\om \in \Lam^{2}(P).$ The Bianchi identity $d
+\Om = 0$ is an immediate consequence of this result. 
+
+The bundle $\ad{}(P)$ is also trivial and we have $\ad{}(P)=M^{4}\times u(1).$ Thus the gauge field $F_{\om} \in
+\df{2}{M^{4}, \ad{}(P)}$, on the base $M^{4}$, can be written as $iF, \ F \in \df{2}{M^{4}}.$ Using the global gauge
+$s:M^{4} \to P$ defined by $s(x)=(x,1), \forall x \in M^{4},$ we can pull the connection form $i \om$ on $P$ to $M^{4}$
+to obtain the gauge potential $iA=is^{*}\om.$ Thus in this case, we have a global potential $A \in \df{1}{M^{4}}$ and
+the corresponding gauge field $F=dA.$ The Bianchi identity $dF=0$ for $F$ follows  from the exactness of the 2-form $F.$
+
+The field equations $\delta F=0$, for $\delta=\hdg d \hdg$ are obtained as the Euler-Lagrange equations minimizing the
+action $\int \abs{F}^{2},$ where $\abs{F}$ is the pseudo-norm induced by the Lorentz metric on $M^{4}$ and the trivial
+inner product on the Lie algebra $\mfk{u}(1).$
+
+We note that the action represents the total energy of the electromagnetic field. The two equations 
+\begin{equation}
+ \label{MM:8.1}
+dF=0, \ \delta F=0
+\end{equation}
+are the Maxwell's equations for a source-free electromagnetic field.
+
+A gauge transformation $f$ is a section of $\Ad{}(P)=M^{4}\times U(1).$ It is completely determined by the function
+$\psi \in \mc{F}(M^{4})$ such that 
+$$
+f(x)=\var{x, e^{i\psi(x)}} \in \Ad{}(P), \forall x \in M^{4}.
+$$
+
+If $iB$ denotes the potential obtained by the action of the gauge transformation $f$ on $iA,$ then we have
+$$
+iB=e^{-i\psi}(iA)e^{i\psi}+e^{-i\psi}d e^{i\psi},\text{ or }B=A+d\psi,
+$$ 
+which is the classical formulation of the gauge transformation f. 

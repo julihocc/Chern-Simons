@@ -1,0 +1,10 @@
+\section{The Bohm-Aharonov effect}
+
+We have discussed above the effect of the geometry of the base space on the propieties of electromagnetic fields
+defined on it. We now discuss a propierty of the electromagnetic field that depends on the topology of the base space.
+In the last example (Dirac example) of the Dirac monopole we saw that the topology of the base space may require
+several local gauge potentials to describe a single global gauge field. in fact, this is the general situation. 
+
+In classical theory only the electromagnetic field was supposed to have physical significance while the potential was
+regarded as a mathematical artifact. However, in topologically non-trivial spaces the potential also becomes physical
+significant. For example, 

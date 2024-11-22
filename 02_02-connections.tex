@@ -1,0 +1,105 @@
+\section{Connections and gauge potential}
+
+\begin{defn}[\cite{DB}, 1.2.1]
+\label{JB:3.1}
+A \emph{connection} assigns to each $p \in P$ a subspace $H_{p} \subset T_{p}P$ such that
+\begin{enumerate}[(i)]
+ \item $T_{p}P= V_{p} \bigoplus H_{p},$ where $V_{p}=\set{X \in T_{p}P| \pi_{*}(X)=0}.$
+\item $R_{g*}H_{p}=H_{p},$ where $R_{g}$ is multiplication by the right
+\item For each $p\in P,$ there exist a neighbourhood $U$ and vector fields $X_{1},...,X_{n}$ on $U$ such that $H_{p}$
+is spanned by $X_{1}(p),...,X_{n}(p)$ for all $p \in U.$
+\end{enumerate}
+\end{defn}
+
+We will also use the following equivalent definition:
+\begin{defn}[\cite{DB}, 1.2.2]
+ \label{JB:3.2}
+A \emph{connection} is a $\mfk{g}-$valued 1-form $\om$ on $P$ satisfying thw following conditions:
+\begin{enumerate}[(i)]
+ \item For the fundamental vector fields $A^{*}(p):= \frac{d}{dt}(p \exp(tA))|_{t=0},$
+$$
+\forall p \in P, \om_{p}(A^{*})=A,
+$$
+\item For any $g \in G,$
+$$
+R^{*}_{g}\om =\op{ad}_{g^{-1}}\om,
+$$
+where $\op{ad}_{g^{-1}} \in Aut(\mfk{g})$ is the adjoint action of $g$ on $\mfk{g}.$ To be more precise, we require
+$(R_{g*}\om)(p)=\op{ad}_{g^{-1}}\om_{p},$ i. e., $\om_{pg}(R_{g*}X_{p})=ad_{g^{-1}}(\om_{p}(X_{p})),$ where $ad:G \to
+GL(\mfk{g})$ denotes the adjoint action of $G$ on $\mfk{g}.$
+\end{enumerate}
+\end{defn}
+
+The equivalence of definitions \ref{JB:3.1} and  \ref{JB:3.2} can be seen as follows: given a connection in the form of
+definition \ref{JB:3.1}, one defines a $\mfk{g}-$valued 1-form $\om$ by $\om(A^{*})=A$ and $\om_{p}(X_{p})=0$ for all
+$X_{p} \in H_{p}.$
+
+Conversely, given a connection 1-form $\om$ as in definition \ref{JB:3.2} define $H_{p}=\set{X \in T_{p}P |
+\om_{p}(X_{p})=0}.$ Since the action of $G$ is free, the map $A \mapsto A^{*}_{p}$ is injective. 
+
+In order to see this, let $A$ be such that $A^{*}_{p}=0,$ then 
+\begin{align*}
+ \frac{d}{dt}(p \exp(tA))&= \frac{d}{ds}(p \exp((s+t)A))|_{s=0} \\
+&= \frac{d}{ds}(p\exp(sA)\exp(tA))|_{s=0} \\
+&= R_{\exp(tA)*}\frac{d}{ds}(p \exp(sA))|_{s=0} \\
+&= R_{\exp(tA)*} A^{*}_{p}=0.
+\end{align*}
+
+So one obtains a vector space isomorphism $\mfk{g}=V_{p}.$ From part 1) of definition \ref{JB:3.2}, it follows that
+$H_{p} \bigoplus V_{p}=T_{p}P.$
+
+It can been shown that $[A^{*},B^{*}]_{p}=[A,B]^{*}_{p}$ for all $A,B \in \mfk{g},$ where $[\cdot, \cdot]$ on vector
+fields is the usual Lie-bracket, i.e., $[X,Y]=\frac{d}{dt}(\phi^{-1}_{t*}Y_{\phi_{t}(p)})|_{t=0}$ where
+$\frac{d}{dt}\phi_{t}=X$ in a neighbourhood of $p.$
+
+\begin{prop}
+\label{JB:3.4}
+The vector fields on M can be identified with the $G-$invariant horizontal fields on $P.$ 
+\end{prop}
+\begin{proof}
+ The map $\pi_{*}$ establish an isomorphism between $H_{p}$ and $T_{\pi{p}}M,$ so it indeeds identifies a subspace of
+$T_{p}P$ with the tangent space of M. This allows us to lift vector fields on M to unique horizontal vector fields on
+$P.$ This horizontal lift is $G-$invariant, i.e., $R_{g*}\tilde{X}=\tilde{X},$ since $R_{g*}H_{p}=H_{pg}.$ Conversely,
+every $G-$invariant vector field $\tilde{X}$ is a lift of a vector field $X=\pi_{*}\tilde{X}$ on $M,$ which is
+well-defined since $\tilde{X}$ is $G-$invariant and $\pi$ is surjective. 
+\end{proof}
+
+\begin{lem}
+ For a horizontal lift $\tilde{X}$ of $X,$ we have $[A^{*}, \tilde{X}]=0,$ for all $A \in \mfk{g}.$
+\end{lem}
+
+\begin{proof}
+ Use the formula $[A^{*}, \tilde{X}]= \frac{d}{dt}\var{\phi^{-1}_{t*}\tilde{X}_{\phi_{t}(p)}}|_{t=0},$ where
+$\phi_{t}(p)= p \exp (tA),$ and the $G-$invariance of $\tilde{X},$ which implies $\phi_{t*}\tilde{X}=\tilde{X},$ for
+all $t$.
+\end{proof}
+
+\begin{rem}
+ By choosing a local trivialisation, i.e, a local section $\sig : U \to P,$ one can pull back $\om$ to a 1-form
+$\om_{U}= \sig^{*}\om$ on $U \subset M.$ In the particular case that $G$ is a matrix Lie group and two local sections
+$\sig:U \to P$ and $\sig: V \to P$ are given such that $U \cap V \neq \emptyset,$ then the transformation rule
+between $\om_{U}$ and $\om_{V}$ is given by
+\begin{equation}
+ \label{JB:1}
+\om_{V}=g_{uv}^{-1} d g_{UV} + g^{-1}_{UV} \om_{U} g_{UV}.
+\end{equation}
+(C.f. [\cite{DB}], definition 1.2.3 and theorem 1.2.5.)
+
+Conversely, a collection of local $\mfk{g}-$valued 1-forms $\set{\om_{U}},$ where $\set{U_{i}}$ is a cover of $M$ such
+that $P$ is locally trivial on $U_{i},$ for all $i,$ satisfying the transformation rule (\ref{JB:1}) glue together into
+a global $\mfk{g}-$valued 1-form $\om$ on $P$ satisfying the conditions of definition \ref{JB:3.2}.
+
+The pullback $\om_{U}$ on $M$ are known as gauge potentials in physics. The transformation property (\ref{JB:1}) is
+what physicists may recognize as the transformation rule of a \emph{gauge potential} in gauge theories. A connection on
+$P$ is therefore also known as a gauge potential. The choice of the local sections is called a choice of gauge.
+\end{rem}
+
+ \begin{defn}
+  \label{JB:3.7}
+A gauge theory on $M$ with a gauge group $G$ consists of a principal $G-$bundle $\pi:P \to M$ endowed with a connection
+$\om.$
+ \end{defn}
+
+
+
+

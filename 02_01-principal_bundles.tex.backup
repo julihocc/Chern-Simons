@@ -1,0 +1,43 @@
+\section{Principal Fiber Bundles}
+
+Classical gauge theories are mathematically described using principal fiber bundles.
+
+\begin{defn}[\cite{DB}, 1.1.1]
+ \label{JB:2.1}
+ A principal fiber bundle $\pi: P \to M$ with structure group $G$ consists of smooth manifolds $P, M$ and a Lie Group
+$G$ together with a smooth surjective projection map $\pi: P \to M,$ where the Lie group $G$ has a free smooth right
+action on $P$ and $\pi^{-1}(\pi(p))=\set{pg : g \in G}.$ If $x \in M,$ then $\pi^{-1}(x)$ is called the fiber above $x.$
+
+Furthermore, we require that for each $x \in M$ there exists an open set $U$ containing $x$ and a diffeomorphism
+$T_{U}: \pi^{-1}(U) \to U \times G$ of the form $\phi_{U}(p)=(\pi(p), s_{U}(p)),$ where $s_{U}: P \to G$ has the
+property $s_{U}(pg)=s_{U}(p)g$ for all $g \in G, p \in \pi^{-1}(U).$
+The map $T_{U}$ is called local trivialization (or, in physics language, a choice of gauge).
+\end{defn}
+
+Let $T_{U}: \fib{U} \to U\times G$ and $T_{V}:\fib{V} \to V \times G$ be two local trivializations of a principal
+fiber bundle $\pi : P \to M.$ The \emph{transition function} from $U$ to $V$ is the map $g_{UV}: U \cap V \to G$
+defined, for $x = \fib{p} \in U \cap V,$ by $g_{UV}(x)=s_{V}(p)s_{U}(p)^{-1}.$ Thus is independent of the choice of $p
+\in \fib{x}.$
+
+\begin{thm}[\cite{DB}, 1.1.5]
+ \label{JB:2.2}
+A principal bundle $\pi: P \to M,$ with structure group $G$ is a trivial bundle if and
+only if it admits a global section $M \to P.$ 
+\end{thm}
+
+
+\begin{proof}
+ Let $ \sig: U \to P$ be a given local section. Then define the smooth map $T_{U}: \fib{U} \to U \times G$ by
+$T_{U}(\sig(x)g)=(\pi(p), g).$ We verify that indeed $T_{U}(\sig(x)gh)=(\pi(p), gh)$ so that $T_{U}$ is a local
+trivialization. Conversely, let $T_{U}: \fib(U) \to U \times G$ be a given local trivialization, then define a section
+$\sig : U \to \fib{U}$ by $\sig(x)=\phi_{u}^{-1}(x,e).$ This, we see that local sections correspond to a local
+trivializations. In particular, this implies that a global sections exists if ans only if the bundle is trivial.
+\end{proof}
+
+\begin{exmp}[Hopf fibration and square root]
+ \label{JB:2.3}
+Identify $\R^{3}$ with $\C \times \R$ by $(x_{1}, x_{2}, x_{3}) \mapsto (z=x_{1} + ix_{2}, x=_{x_{3}})$ and $\R^{4}$
+with $\C^{2}$ by identifying $(x_{1},...,x_{4}) \mapsto (z_{1}=x_{1}+ix_{2}, z_{2}=x_{3}+ix_{4}).$ Then the unit sphere
+$S^{2}$ in $\R^{3}$ is identified with $\set{(z,x)| \abs{z}^{2}+\abs{x}^{2}}$ and 
+\end{exmp}
+
